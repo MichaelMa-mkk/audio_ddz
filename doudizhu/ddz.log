@@ -1,0 +1,3670 @@
+listening on 8080
+200 GET / (::1) 74.17ms
+200 GET /static/js/player.js?v=07f3d51e9b3e039011bd29a276f45a3d (::1) 445.05ms
+200 GET /static/js/boot.js?v=acf696f85bbc5b067c01cd94c0bd2eb2 (::1) 24.40ms
+200 GET /static/js/game.js?v=afe31c95af861c1678f175ffebcf7c35 (::1) 22.45ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 19.52ms
+200 GET /static/js/rule.js?v=ad5578544a6f4f34ea39910e0d935ea9 (::1) 16.59ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 13.66ms
+200 GET /static/js/net.js?v=fc877b11e0e647a1df78ca3ed1390928 (::1) 7.76ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 53.68ms
+200 GET /static/i/preload.png (::1) 10.74ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 5.86ms
+200 GET /static/s/win.ogg (::1) 11.71ms
+200 GET /static/s/bg3.ogg (::1) 26.35ms
+200 GET /static/i/btn.png (::1) 13.66ms
+200 GET /static/i/poker.png (::1) 43.91ms
+200 GET /static/i/btn.json (::1) 32.21ms
+200 GET /static/i/bg.png (::1) 87.84ms
+200 GET /static/rule.json (::1) 42.94ms
+404 GET /favicon.ico (::1) 0.98ms
+Uncaught exception POST /reg (::1)
+HTTPServerRequest(protocol='http', host='localhost:8080', method='POST', uri='/reg', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "C:\Program Files\Python36\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:\Users\13735\IdeaProjects\doudizhu\handlers\web.py", line 20, in post
+    account = self.db.get('SELECT * FROM account WHERE email="%s"', email)
+  File "C:\Users\13735\IdeaProjects\doudizhu\db\torndb.py", line 73, in get
+    rows = self.query(query, *args, **kwargs)
+  File "C:\Users\13735\IdeaProjects\doudizhu\db\torndb.py", line 61, in query
+    self._execute(cursor, query, args, kwargs)
+  File "C:\Users\13735\IdeaProjects\doudizhu\db\torndb.py", line 143, in _execute
+    return cursor.execute(query, kwargs or args)
+  File "C:\Program Files\Python36\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "C:\Program Files\Python36\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "C:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "C:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Program Files\Python36\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'ddz.account' doesn't exist")
+500 POST /reg (::1) 31.23ms
+200 POST /reg (::1) 362.10ms
+101 GET /ws (::1) 2.93ms
+SOCKET[1] OPEN
+REQ[1]: [17, 2]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+SOCKET[1] CLOSE
+200 GET / (::1) 5.85ms
+304 GET /static/i/preload.png (::1) 3.93ms
+304 GET /static/s/bg3.ogg (::1) 1.95ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+304 GET /static/s/win.ogg (::1) 1.95ms
+304 GET /static/s/lose.ogg (::1) 1.96ms
+304 GET /static/i/btn.png (::1) 3.91ms
+304 GET /static/i/bg.png (::1) 0.98ms
+304 GET /static/i/poker.png (::1) 2.93ms
+304 GET /static/rule.json (::1) 0.96ms
+304 GET /static/i/btn.json (::1) 1.96ms
+101 GET /ws (::1) 0.00ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 1, [3, 6, 7, 10, 18, 19, 24, 31, 36, 37, 38, 40, 46, 47, 48, 52, 53]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x0000017BE33FF780>, <core.robot.AiPlayer object at 0x0000017BE33F3FD0>, <core.robot.AiPlayer object at 0x0000017BE33F34E0>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [1, 4, 5, 11, 15, 16, 27, 28, 29, 30, 32, 33, 39, 41, 44, 49, 50]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [0, 2, 8, 9, 12, 13, 14, 17, 20, 21, 23, 25, 26, 35, 43, 45, 51]]
+REQ[1]: [33, 3]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [22, 42, 34]]
+Player[1] IS LANDLORD[[22, 42, 34]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [22, 42, 34]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [22, 42, 34]]
+REQ[1]: [37, [18, 6, 46, 47, 22, 36, 37]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [18, 6, 46, 47, 22, 36, 37]]
+Player[1] shot[[18, 6, 46, 47, 22, 36, 37]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [18, 6, 46, 47, 22, 36, 37]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [18, 6, 46, 47, 22, 36, 37]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [38, 24, 10, 48, 34, 7, 19, 31]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [38, 24, 10, 48, 34, 7, 19, 31]]
+Player[1] shot[[38, 24, 10, 48, 34, 7, 19, 31]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [38, 24, 10, 48, 34, 7, 19, 31]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [38, 24, 10, 48, 34, 7, 19, 31]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [40]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [40]]
+Player[1] shot[[40]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [40]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [40]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [52, 53]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [52, 53]]
+Player[1] shot[[52, 53]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [52, 53]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [52, 53]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [42, 3]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [42, 3]]
+Player[1] shot[[42, 3]]
+RSP[1]: [<Protocol.RSP_GAME_OVER: 42>, 1, 500, [11, 1, 4, 5, 11, 15, 16, 27, 28, 29, 30, 32, 33, 39, 41, 44, 49, 50], [12, 0, 2, 8, 9, 12, 13, 14, 17, 20, 21, 23, 25, 26, 35, 43, 45, 51]]
+Table[1] GameOver[1]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [42, 3]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [42, 3]]
+AI[11] ON: [<Protocol.RSP_GAME_OVER: 42>, 11, 300, [1], [12, 0, 2, 8, 9, 12, 13, 14, 17, 20, 21, 23, 25, 26, 35, 43, 45, 51]]
+AI[12] ON: [<Protocol.RSP_GAME_OVER: 42>, 12, 300, [1], [11, 1, 4, 5, 11, 15, 16, 27, 28, 29, 30, 32, 33, 39, 41, 44, 49, 50]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [4, 30]]
+REQ[11]: [37, [4, 30]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4, 30]]
+Player[11] shot[[4, 30]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4, 30]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4, 30]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [8, 21]]
+REQ[12]: [37, [8, 21]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [8, 21]]
+Player[12] shot[[8, 21]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [8, 21]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [8, 21]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+RSP[1]: [<Protocol.RSP_GAME_OVER: 42>, 1, 500, [11, 1, 5, 11, 15, 16, 27, 28, 29, 32, 33, 39, 41, 44, 49, 50], [12, 0, 2, 9, 12, 13, 14, 17, 20, 23, 25, 26, 35, 43, 45, 51]]
+Table[1] GameOver[1]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] ON: [<Protocol.RSP_GAME_OVER: 42>, 11, 300, [1], [12, 0, 2, 9, 12, 13, 14, 17, 20, 23, 25, 26, 35, 43, 45, 51]]
+AI[12] ON: [<Protocol.RSP_GAME_OVER: 42>, 12, 300, [1], [11, 1, 5, 11, 15, 16, 27, 28, 29, 32, 33, 39, 41, 44, 49, 50]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [11, 50]]
+REQ[11]: [37, [11, 50]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [11, 50]]
+Player[11] shot[[11, 50]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [11, 50]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [11, 50]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [12, 25]]
+REQ[12]: [37, [12, 25]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [12, 25]]
+Player[12] shot[[12, 25]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [12, 25]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [12, 25]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+RSP[1]: [<Protocol.RSP_GAME_OVER: 42>, 1, 500, [11, 1, 5, 15, 16, 27, 28, 29, 32, 33, 39, 41, 44, 49], [12, 0, 2, 9, 13, 14, 17, 20, 23, 26, 35, 43, 45, 51]]
+Table[1] GameOver[1]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] ON: [<Protocol.RSP_GAME_OVER: 42>, 11, 300, [1], [12, 0, 2, 9, 13, 14, 17, 20, 23, 26, 35, 43, 45, 51]]
+AI[12] ON: [<Protocol.RSP_GAME_OVER: 42>, 12, 300, [1], [11, 1, 5, 15, 16, 27, 28, 29, 32, 33, 39, 41, 44, 49]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [1, 27]]
+REQ[11]: [37, [1, 27]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [1, 27]]
+Player[11] shot[[1, 27]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [1, 27]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [1, 27]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+RSP[1]: [<Protocol.RSP_GAME_OVER: 42>, 1, 500, [11, 5, 15, 16, 28, 29, 32, 33, 39, 41, 44, 49], [12, 0, 2, 9, 13, 14, 17, 20, 23, 26, 35, 43, 45, 51]]
+Table[1] GameOver[1]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] ON: [<Protocol.RSP_GAME_OVER: 42>, 11, 300, [1], [12, 0, 2, 9, 13, 14, 17, 20, 23, 26, 35, 43, 45, 51]]
+AI[12] ON: [<Protocol.RSP_GAME_OVER: 42>, 12, 300, [1], [11, 5, 15, 16, 28, 29, 32, 33, 39, 41, 44, 49]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [5]]
+REQ[11]: [37, [5]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [5]]
+Player[11] shot[[5]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [5]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [5]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [45]]
+REQ[12]: [37, [45]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [45]]
+Player[12] shot[[45]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [45]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [45]]
+304 GET / (::1) 1.95ms
+SOCKET[1] CLOSE
+304 GET /static/i/preload.png (::1) 0.98ms
+304 GET /static/s/bg3.ogg (::1) 0.98ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+304 GET /static/s/lose.ogg (::1) 0.98ms
+304 GET /static/s/win.ogg (::1) 0.98ms
+304 GET /static/i/btn.png (::1) 1.95ms
+304 GET /static/i/bg.png (::1) 1.95ms
+304 GET /static/i/poker.png (::1) 1.96ms
+304 GET /static/i/btn.json (::1) 1.96ms
+304 GET /static/rule.json (::1) 1.95ms
+101 GET /ws (::1) 0.97ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[2]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+REQ[11]: [19, 2]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[2]
+REQ[12]: [19, 2]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[2]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 1, [0, 2, 5, 8, 10, 13, 18, 20, 28, 29, 34, 40, 41, 42, 47, 48, 53]]
+TABLE[2] GAME BEGIN[[<core.player.Player object at 0x0000017BE344ED68>, <core.robot.AiPlayer object at 0x0000017BE344E9B0>, <core.robot.AiPlayer object at 0x0000017BE344E978>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [3, 4, 12, 17, 19, 21, 22, 25, 31, 32, 33, 37, 38, 39, 43, 44, 51]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [1, 6, 7, 9, 11, 15, 16, 23, 24, 26, 30, 35, 36, 45, 46, 49, 52]]
+304 GET / (::1) 1.96ms
+SOCKET[1] CLOSE
+404 GET /static/s/deal.ogg (::1) 1.95ms
+101 GET /ws (::1) 1.95ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[3]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+REQ[11]: [19, 3]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[3]
+REQ[12]: [19, 3]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[3]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 1, [1, 6, 8, 10, 21, 22, 24, 25, 26, 29, 31, 34, 38, 42, 45, 50, 51]]
+TABLE[3] GAME BEGIN[[<core.player.Player object at 0x0000017BE3456550>, <core.robot.AiPlayer object at 0x0000017BE344EC18>, <core.robot.AiPlayer object at 0x0000017BE34561D0>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [5, 13, 16, 17, 20, 23, 27, 30, 32, 35, 37, 39, 40, 41, 44, 48, 52]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [0, 2, 3, 4, 7, 11, 12, 14, 18, 19, 33, 36, 43, 46, 47, 49, 53]]
+REQ[1]: [33, 2]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 2, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 2, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 2, False]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [9, 15, 28]]
+Player[1] IS LANDLORD[[9, 15, 28]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [9, 15, 28]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [9, 15, 28]]
+REQ[1]: [37, [15, 28]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15, 28]]
+Player[1] shot[[15, 28]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15, 28]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15, 28]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [17, 30]]
+REQ[11]: [37, [17, 30]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [17, 30]]
+Player[11] shot[[17, 30]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [17, 30]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [17, 30]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [7, 33]]
+REQ[12]: [37, [7, 33]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [7, 33]]
+Player[12] shot[[7, 33]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [7, 33]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [7, 33]]
+REQ[1]: [37, [9, 22]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [9, 22]]
+Player[1] shot[[9, 22]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [9, 22]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [9, 22]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [13, 39]]
+REQ[11]: [37, [13, 39]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [13, 39]]
+Player[11] shot[[13, 39]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [13, 39]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [13, 39]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [5]]
+REQ[11]: [37, [5]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [5]]
+Player[11] shot[[5]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [5]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [5]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [19]]
+REQ[12]: [37, [19]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [19]]
+Player[12] shot[[19]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [19]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [19]]
+REQ[1]: [37, [10]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [10]]
+Player[1] shot[[10]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [10]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [10]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [37]]
+REQ[11]: [37, [37]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [37]]
+Player[11] shot[[37]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [37]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [37]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [12]]
+REQ[12]: [37, [12]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [12]]
+Player[12] shot[[12]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [12]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [12]]
+REQ[1]: [37, [1]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [1]]
+Player[1] shot[[1]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [1]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [1]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [52]]
+REQ[11]: [37, [52]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [52]]
+Player[11] shot[[52]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [52]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [52]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [16]]
+REQ[11]: [37, [16]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+Player[11] shot[[16]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [4]]
+REQ[12]: [37, [4]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+Player[12] shot[[4]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+REQ[1]: [37, [26]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [26]]
+Player[1] shot[[26]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [26]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [26]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [27]]
+REQ[11]: [37, [27]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [27]]
+Player[11] shot[[27]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [27]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [27]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [53]]
+REQ[12]: [37, [53]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [53]]
+Player[12] shot[[53]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [53]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [53]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [0]]
+REQ[12]: [37, [0]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [0]]
+Player[12] shot[[0]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [0]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [0]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [40]]
+REQ[11]: [37, [40]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [40]]
+Player[11] shot[[40]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [40]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [40]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [20]]
+REQ[11]: [37, [20]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [20]]
+Player[11] shot[[20]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [20]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [20]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [47]]
+REQ[12]: [37, [47]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [47]]
+Player[12] shot[[47]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [47]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [47]]
+REQ[1]: [37, [25]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [25]]
+Player[1] shot[[25]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [25]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [25]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [14]]
+REQ[12]: [37, [14]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [14]]
+Player[12] shot[[14]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [14]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [14]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [2]]
+REQ[12]: [37, [2]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [2]]
+Player[12] shot[[2]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [2]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [2]]
+REQ[1]: [37, [31]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [31]]
+Player[1] shot[[31]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [31]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [31]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [32]]
+REQ[11]: [37, [32]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [32]]
+Player[11] shot[[32]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [32]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [32]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [46]]
+REQ[12]: [37, [46]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [46]]
+Player[12] shot[[46]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [46]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [46]]
+REQ[1]: [37, [51]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [51]]
+Player[1] shot[[51]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [51]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [51]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [34, 21, 8, 42, 29]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [34, 21, 8, 42, 29]]
+Player[1] shot[[34, 21, 8, 42, 29]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [34, 21, 8, 42, 29]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [34, 21, 8, 42, 29]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [45, 6]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [45, 6]]
+Player[1] shot[[45, 6]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [45, 6]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [45, 6]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [35, 48]]
+REQ[11]: [37, [35, 48]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [35, 48]]
+Player[11] shot[[35, 48]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [35, 48]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [35, 48]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [36, 49]]
+REQ[12]: [37, [36, 49]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [36, 49]]
+Player[12] shot[[36, 49]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [36, 49]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [36, 49]]
+REQ[1]: [37, [50, 24]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [50, 24]]
+Player[1] shot[[50, 24]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [50, 24]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [50, 24]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [38]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [38]]
+Player[1] shot[[38]]
+RSP[1]: [<Protocol.RSP_GAME_OVER: 42>, 1, 300, [11, 23, 41, 44], [12, 3, 11, 18, 43]]
+Table[3] GameOver[3]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [38]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [38]]
+AI[11] ON: [<Protocol.RSP_GAME_OVER: 42>, 11, 200, [1], [12, 3, 11, 18, 43]]
+AI[12] ON: [<Protocol.RSP_GAME_OVER: 42>, 12, 200, [1], [11, 23, 41, 44]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+404 GET /sockjs-node/info?t=1527916432485 (::1) 1.95ms
+304 GET / (::1) 1.95ms
+SOCKET[1] CLOSE
+304 GET /static/i/preload.png (::1) 1.95ms
+304 GET /static/s/bg3.ogg (::1) 0.98ms
+304 GET /static/s/win.ogg (::1) 1.95ms
+404 GET /static/s/deal.ogg (::1) 1.96ms
+304 GET /static/s/lose.ogg (::1) 0.98ms
+304 GET /static/i/btn.png (::1) 2.93ms
+304 GET /static/i/bg.png (::1) 1.95ms
+304 GET /static/i/poker.png (::1) 1.95ms
+304 GET /static/i/btn.json (::1) 1.95ms
+304 GET /static/rule.json (::1) 1.95ms
+listening on 8080
+200 GET / (::1) 8.78ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 230.34ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+101 GET /ws (::1) 2.92ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 1, 2, 12, 13, 16, 17, 18, 23, 24, 27, 33, 34, 37, 39, 40, 46]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x0000017855B93D30>, <core.robot.AiPlayer object at 0x0000017855B76550>, <core.robot.AiPlayer object at 0x0000017855B93AC8>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [3, 4, 9, 10, 11, 14, 15, 19, 21, 29, 32, 36, 41, 42, 43, 44, 53]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [6, 7, 8, 22, 25, 26, 28, 30, 31, 35, 38, 45, 47, 49, 50, 51, 52]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[1]: [33, 3]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [20, 5, 48]]
+Player[1] IS LANDLORD[[20, 5, 48]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [20, 5, 48]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [20, 5, 48]]
+REQ[1]: [37, [2]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [2]]
+Player[1] shot[[2]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [2]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [2]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [3]]
+REQ[11]: [37, [3]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+Player[11] shot[[3]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [30]]
+REQ[12]: [37, [30]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [30]]
+Player[12] shot[[30]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [30]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [30]]
+REQ[1]: [37, [37]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [37]]
+Player[1] shot[[37]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [37]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [37]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [14]]
+REQ[11]: [37, [14]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [14]]
+Player[11] shot[[14]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [14]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [14]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [52]]
+REQ[12]: [37, [52]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [52]]
+Player[12] shot[[52]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [52]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [52]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [6]]
+REQ[12]: [37, [6]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [6]]
+Player[12] shot[[6]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [6]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [6]]
+REQ[1]: [37, [1]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [1]]
+Player[1] shot[[1]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [1]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [1]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [53]]
+REQ[11]: [37, [53]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [53]]
+Player[11] shot[[53]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [53]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [53]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [4]]
+REQ[11]: [37, [4]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+Player[11] shot[[4]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [31]]
+REQ[12]: [37, [31]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [31]]
+Player[12] shot[[31]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [31]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [31]]
+REQ[1]: [37, [40]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [40]]
+Player[1] shot[[40]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [40]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [40]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [16, 33, 46, 20]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [16, 33, 46, 20]]
+Player[1] shot[[16, 33, 46, 20]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [16, 33, 46, 20]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [16, 33, 46, 20]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [28, 25, 38, 51]]
+REQ[12]: [37, [28, 25, 38, 51]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [28, 25, 38, 51]]
+Player[12] shot[[28, 25, 38, 51]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [28, 25, 38, 51]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [28, 25, 38, 51]]
+REQ[1]: [37, [0, 39, 13, 17]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [0, 39, 13, 17]]
+Player[1] shot[[0, 39, 13, 17]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [0, 39, 13, 17]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [0, 39, 13, 17]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [12, 24, 23, 48, 34]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [12, 24, 23, 48, 34]]
+Player[1] shot[[12, 24, 23, 48, 34]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [12, 24, 23, 48, 34]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [12, 24, 23, 48, 34]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [27]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [27]]
+Player[1] shot[[27]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [27]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [27]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [5, 18]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [5, 18]]
+Player[1] shot[[5, 18]]
+RSP[1]: [<Protocol.RSP_GAME_OVER: 42>, 1, 500, [11, 9, 10, 11, 15, 19, 21, 29, 32, 36, 41, 42, 43, 44], [12, 7, 8, 22, 26, 35, 45, 47, 49, 50]]
+Table[1] GameOver[1]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [5, 18]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [5, 18]]
+AI[11] ON: [<Protocol.RSP_GAME_OVER: 42>, 11, 300, [1], [12, 7, 8, 22, 26, 35, 45, 47, 49, 50]]
+AI[12] ON: [<Protocol.RSP_GAME_OVER: 42>, 12, 300, [1], [11, 9, 10, 11, 15, 19, 21, 29, 32, 36, 41, 42, 43, 44]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [19, 32]]
+REQ[11]: [37, [19, 32]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [19, 32]]
+Player[11] shot[[19, 32]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [19, 32]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [19, 32]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [8, 47]]
+REQ[12]: [37, [8, 47]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [8, 47]]
+Player[12] shot[[8, 47]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [8, 47]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [8, 47]]
+listening on 8080
+200 GET / (::1) 8.78ms
+200 GET /static/js/game.js?v=509f41fec71384a345413fbb09c95712 (::1) 232.29ms
+304 GET /static/i/preload.png (::1) 1.95ms
+304 GET /static/s/bg3.ogg (::1) 1.95ms
+304 GET /static/s/win.ogg (::1) 1.95ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+304 GET /static/s/lose.ogg (::1) 1.95ms
+304 GET /static/i/btn.png (::1) 4.88ms
+304 GET /static/i/bg.png (::1) 2.93ms
+304 GET /static/i/poker.png (::1) 1.95ms
+304 GET /static/i/btn.json (::1) 1.95ms
+304 GET /static/rule.json (::1) 5.87ms
+101 GET /ws (::1) 0.00ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [5, 6, 7, 10, 12, 19, 20, 26, 28, 32, 33, 34, 35, 37, 38, 45, 49]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x000001F373685BE0>, <core.robot.AiPlayer object at 0x000001F373685978>, <core.robot.AiPlayer object at 0x000001F373685BA8>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 11, 14, 16, 18, 22, 23, 24, 25, 29, 39, 41, 42, 44, 47, 50, 51]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 2, 4, 8, 9, 13, 15, 17, 27, 30, 31, 36, 40, 43, 48, 52, 53]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[1]: [33, 3]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [21, 46, 3]]
+Player[1] IS LANDLORD[[21, 46, 3]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [21, 46, 3]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [21, 46, 3]]
+REQ[1]: [37, [28]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [28]]
+Player[1] shot[[28]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [28]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [28]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [16]]
+REQ[11]: [37, [16]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+Player[11] shot[[16]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [4]]
+REQ[12]: [37, [4]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+Player[12] shot[[4]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+REQ[1]: [37, [10]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [10]]
+Player[1] shot[[10]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [10]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [10]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [11]]
+REQ[11]: [37, [11]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [11]]
+Player[11] shot[[11]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [11]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [11]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [13]]
+REQ[12]: [37, [13]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [13]]
+Player[12] shot[[13]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [13]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [13]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [14]]
+REQ[11]: [37, [14]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [14]]
+Player[11] shot[[14]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [14]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [14]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [53]]
+REQ[12]: [37, [53]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [53]]
+Player[12] shot[[53]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [53]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [53]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [1]]
+REQ[12]: [37, [1]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [1]]
+Player[12] shot[[1]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [1]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [1]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [2]]
+REQ[12]: [37, [2]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [2]]
+Player[12] shot[[2]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [2]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [2]]
+REQ[1]: [37, [3]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [3]]
+Player[1] shot[[3]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [3]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [3]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [18]]
+REQ[11]: [37, [18]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [18]]
+Player[11] shot[[18]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [18]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [18]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [8]]
+REQ[12]: [37, [8]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [8]]
+Player[12] shot[[8]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [8]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [8]]
+REQ[1]: [37, [38]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [38]]
+Player[1] shot[[38]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [38]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [38]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [0]]
+REQ[11]: [37, [0]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [0]]
+Player[11] shot[[0]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [0]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [0]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [27]]
+REQ[12]: [37, [27]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [27]]
+Player[12] shot[[27]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [27]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [27]]
+REQ[1]: [37, [19, 45, 32, 6]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [19, 45, 32, 6]]
+Player[1] shot[[19, 45, 32, 6]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [19, 45, 32, 6]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [19, 45, 32, 6]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [34, 35, 49, 37, 12, 26]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [34, 35, 49, 37, 12, 26]]
+Player[1] shot[[34, 35, 49, 37, 12, 26]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [34, 35, 49, 37, 12, 26]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [34, 35, 49, 37, 12, 26]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [21, 7, 46, 33, 5, 20]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [21, 7, 46, 33, 5, 20]]
+Player[1] shot[[21, 7, 46, 33, 5, 20]]
+RSP[1]: [<Protocol.RSP_GAME_OVER: 42>, 1, 500, [11, 22, 23, 24, 25, 29, 39, 41, 42, 44, 47, 50, 51], [12, 9, 15, 17, 30, 31, 36, 40, 43, 48, 52]]
+Table[1] GameOver[1]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [21, 7, 46, 33, 5, 20]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [21, 7, 46, 33, 5, 20]]
+AI[11] ON: [<Protocol.RSP_GAME_OVER: 42>, 11, 300, [1], [12, 9, 15, 17, 30, 31, 36, 40, 43, 48, 52]]
+AI[12] ON: [<Protocol.RSP_GAME_OVER: 42>, 12, 300, [1], [11, 22, 23, 24, 25, 29, 39, 41, 42, 44, 47, 50, 51]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+REQ[1]: [37, None]
+Player[1] TURN CHEAT
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+304 GET / (::1) 0.98ms
+SOCKET[1] CLOSE
+304 GET /static/i/preload.png (::1) 1.95ms
+304 GET /static/s/bg3.ogg (::1) 0.98ms
+404 GET /static/s/deal.ogg (::1) 0.97ms
+304 GET /static/s/lose.ogg (::1) 3.90ms
+304 GET /static/s/win.ogg (::1) 0.97ms
+304 GET /static/i/btn.png (::1) 1.95ms
+304 GET /static/i/poker.png (::1) 0.97ms
+304 GET /static/i/bg.png (::1) 0.99ms
+304 GET /static/i/btn.json (::1) 2.91ms
+304 GET /static/rule.json (::1) 2.91ms
+101 GET /ws (::1) 0.96ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[2]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+REQ[11]: [19, 2]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[2]
+REQ[12]: [19, 2]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[2]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 1, [0, 1, 4, 6, 7, 17, 18, 27, 29, 30, 31, 35, 40, 45, 46, 51, 52]]
+TABLE[2] GAME BEGIN[[<core.player.Player object at 0x000001F3736A30B8>, <core.robot.AiPlayer object at 0x000001F3736A3470>, <core.robot.AiPlayer object at 0x000001F3736A34E0>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [3, 5, 8, 9, 11, 13, 15, 19, 20, 21, 25, 32, 34, 37, 38, 39, 42]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [2, 14, 16, 22, 23, 24, 26, 28, 33, 36, 41, 43, 44, 47, 48, 49, 50]]
+REQ[1]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 1, False]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [10, 12, 53]]
+Player[1] IS LANDLORD[[10, 12, 53]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [10, 12, 53]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [10, 12, 53]]
+404 GET /static/js/phaser.map (::1) 0.98ms
+REQ[1]: [37, [7, 46, 6, 45, 31, 18]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [7, 46, 6, 45, 31, 18]]
+Player[1] shot[[7, 46, 6, 45, 31, 18]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [7, 46, 6, 45, 31, 18]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [7, 46, 6, 45, 31, 18]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [11, 37, 25, 38, 13, 39]]
+REQ[11]: [37, [11, 37, 25, 38, 13, 39]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [11, 37, 25, 38, 13, 39]]
+Player[11] shot[[11, 37, 25, 38, 13, 39]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [11, 37, 25, 38, 13, 39]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [11, 37, 25, 38, 13, 39]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [3]]
+REQ[11]: [37, [3]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+Player[11] shot[[3]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [43]]
+REQ[12]: [37, [43]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+Player[12] shot[[43]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+REQ[1]: [37, [35]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [35]]
+Player[1] shot[[35]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [35]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [35]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [23]]
+REQ[12]: [37, [23]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [23]]
+Player[12] shot[[23]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [23]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [23]]
+REQ[1]: [37, [0]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [0]]
+Player[1] shot[[0]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [0]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [0]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [14]]
+REQ[12]: [37, [14]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [14]]
+Player[12] shot[[14]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [14]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [14]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [2]]
+REQ[12]: [37, [2]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [2]]
+Player[12] shot[[2]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [2]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [2]]
+REQ[1]: [37, [10]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [10]]
+Player[1] shot[[10]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [10]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [10]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [24]]
+REQ[12]: [37, [24]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [24]]
+Player[12] shot[[24]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [24]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [24]]
+REQ[1]: [37, [27]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [27]]
+Player[1] shot[[27]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [27]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [27]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [51, 12]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [51, 12]]
+Player[1] shot[[51, 12]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [51, 12]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [51, 12]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [40, 1]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [40, 1]]
+Player[1] shot[[40, 1]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [40, 1]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [40, 1]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [4, 30, 17, 29]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [4, 30, 17, 29]]
+Player[1] shot[[4, 30, 17, 29]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [4, 30, 17, 29]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [4, 30, 17, 29]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [15, 8, 21, 34]]
+REQ[11]: [37, [15, 8, 21, 34]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [15, 8, 21, 34]]
+Player[11] shot[[15, 8, 21, 34]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [15, 8, 21, 34]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [15, 8, 21, 34]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [52, 53]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [52, 53]]
+Player[1] shot[[52, 53]]
+RSP[1]: [<Protocol.RSP_GAME_OVER: 42>, 1, 100, [11, 5, 9, 19, 20, 32, 42], [12, 16, 22, 26, 28, 33, 36, 41, 44, 47, 48, 49, 50]]
+Table[2] GameOver[2]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [52, 53]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [52, 53]]
+AI[11] ON: [<Protocol.RSP_GAME_OVER: 42>, 11, 100, [1], [12, 16, 22, 26, 28, 33, 36, 41, 44, 47, 48, 49, 50]]
+AI[12] ON: [<Protocol.RSP_GAME_OVER: 42>, 12, 100, [1], [11, 5, 9, 19, 20, 32, 42]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+REQ[1]: [37, None]
+Player[1] TURN CHEAT
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+304 GET / (::1) 1.96ms
+SOCKET[1] CLOSE
+404 GET /static/js/phaser.map (::1) 0.98ms
+304 GET /static/i/preload.png (::1) 1.95ms
+304 GET /static/s/bg3.ogg (::1) 1.95ms
+304 GET /static/s/win.ogg (::1) 0.97ms
+304 GET /static/s/lose.ogg (::1) 1.96ms
+404 GET /static/s/deal.ogg (::1) 1.95ms
+304 GET /static/i/btn.png (::1) 0.98ms
+304 GET /static/i/poker.png (::1) 1.95ms
+304 GET /static/rule.json (::1) 3.90ms
+304 GET /static/i/bg.png (::1) 1.95ms
+304 GET /static/i/btn.json (::1) 1.94ms
+101 GET /ws (::1) 0.96ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[3]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+REQ[11]: [19, 3]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[3]
+REQ[12]: [19, 3]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[3]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 11, [0, 3, 4, 11, 13, 17, 24, 26, 27, 28, 33, 35, 37, 40, 41, 46, 47]]
+TABLE[3] GAME BEGIN[[<core.player.Player object at 0x000001F3736B43C8>, <core.robot.AiPlayer object at 0x000001F373697518>, <core.robot.AiPlayer object at 0x000001F3736A3D30>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [6, 8, 9, 12, 16, 18, 19, 21, 22, 25, 29, 30, 39, 48, 51, 52, 53]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [1, 2, 5, 7, 10, 14, 20, 23, 31, 32, 34, 36, 43, 44, 45, 49, 50]]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[1]: [33, 2]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 2, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [15, 38, 42]]
+Player[1] IS LANDLORD[[15, 38, 42]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 2, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 2, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [15, 38, 42]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [15, 38, 42]]
+REQ[1]: [37, [15]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+Player[1] shot[[15]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [16]]
+REQ[11]: [37, [16]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+Player[11] shot[[16]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [43]]
+REQ[12]: [37, [43]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+Player[12] shot[[43]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+304 GET / (::1) 6.83ms
+404 GET /robots.txt (::1) 1.95ms
+304 GET /static/i/preload.png (::1) 1.95ms
+304 GET /static/s/bg3.ogg (::1) 1.95ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+304 GET /static/s/win.ogg (::1) 1.95ms
+304 GET /static/s/lose.ogg (::1) 1.95ms
+304 GET /static/i/btn.png (::1) 0.98ms
+304 GET /static/i/bg.png (::1) 3.91ms
+304 GET /static/i/poker.png (::1) 0.98ms
+304 GET /static/rule.json (::1) 4.87ms
+304 GET /static/i/btn.json (::1) 1.95ms
+listening on 8080
+404 GET /sockjs-node/info?t=1527925026953 (127.0.0.1) 0.98ms
+200 GET / (127.0.0.1) 254.74ms
+404 GET /static/js/phaser.map (::1) 2.93ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (127.0.0.1) 417.73ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 9.76ms
+304 GET /static/i/preload.png (::1) 4.87ms
+304 GET /static/s/bg3.ogg (::1) 17.57ms
+304 GET /static/s/win.ogg (127.0.0.1) 13.66ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+304 GET /static/s/lose.ogg (::1) 67.34ms
+304 GET /static/i/poker.png (::1) 3.90ms
+304 GET /static/rule.json (::1) 1.95ms
+304 GET /static/i/bg.png (127.0.0.1) 29.27ms
+304 GET /static/i/btn.png (::1) 12.70ms
+304 GET /static/i/btn.json (::1) 46.84ms
+101 GET /ws (::1) 0.00ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 8, 9, 10, 13, 17, 24, 27, 29, 31, 32, 35, 38, 39, 40, 41, 52]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x0000021604DD5EB8>, <core.robot.AiPlayer object at 0x0000021604B7EEF0>, <core.robot.AiPlayer object at 0x0000021604DA8B38>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [3, 15, 19, 20, 21, 25, 28, 33, 36, 42, 43, 44, 45, 46, 48, 49, 50]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [2, 4, 5, 6, 7, 11, 14, 16, 18, 22, 26, 30, 34, 37, 47, 51, 53]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[1]: [33, 3]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [23, 0, 12]]
+Player[1] IS LANDLORD[[23, 0, 12]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [23, 0, 12]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [23, 0, 12]]
+REQ[1]: [37, [41, 29, 17, 31, 32]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [41, 29, 17, 31, 32]]
+Player[1] shot[[41, 29, 17, 31, 32]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [41, 29, 17, 31, 32]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [41, 29, 17, 31, 32]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [3, 43, 44, 19, 20]]
+REQ[11]: [37, [3, 43, 44, 19, 20]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3, 43, 44, 19, 20]]
+Player[11] shot[[3, 43, 44, 19, 20]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3, 43, 44, 19, 20]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3, 43, 44, 19, 20]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [4, 5, 6, 7, 34]]
+REQ[12]: [37, [4, 5, 6, 7, 34]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4, 5, 6, 7, 34]]
+Player[12] shot[[4, 5, 6, 7, 34]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4, 5, 6, 7, 34]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4, 5, 6, 7, 34]]
+REQ[1]: [37, [8, 9, 10, 24, 38]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [8, 9, 10, 24, 38]]
+Player[1] shot[[8, 9, 10, 24, 38]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [8, 9, 10, 24, 38]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [8, 9, 10, 24, 38]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, [13, 39, 0, 35]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [13, 39, 0, 35]]
+Player[1] shot[[13, 39, 0, 35]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [13, 39, 0, 35]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [13, 39, 0, 35]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+listening on 8080
+200 GET / (::1) 33.22ms
+404 GET /static/js/phaser.map (::1) 2.92ms
+304 GET /static/i/preload.png (::1) 225.46ms
+304 GET /static/s/bg3.ogg (::1) 5.85ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+304 GET /static/s/win.ogg (::1) 1.95ms
+304 GET /static/s/lose.ogg (::1) 3.90ms
+304 GET /static/i/btn.png (::1) 70.27ms
+304 GET /static/i/poker.png (::1) 62.47ms
+304 GET /static/rule.json (::1) 6.83ms
+304 GET /static/i/bg.png (::1) 6.83ms
+304 GET /static/i/btn.json (::1) 0.98ms
+101 GET /ws (::1) 0.00ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 1, [3, 10, 12, 15, 16, 20, 27, 28, 29, 31, 34, 39, 41, 44, 47, 49, 50]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x00000283D864B400>, <core.robot.AiPlayer object at 0x00000283D8630D68>, <core.robot.AiPlayer object at 0x00000283D864B208>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [0, 7, 13, 18, 22, 23, 24, 25, 30, 35, 36, 42, 43, 45, 46, 48, 51]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [1, 2, 4, 6, 8, 9, 11, 14, 19, 21, 26, 32, 33, 37, 38, 40, 52]]
+REQ[1]: [33, 0]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 0, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 0, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 0, False]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 11, [5, 17, 53]]
+Player[11] IS LANDLORD[[5, 17, 53]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 11, [5, 17, 53]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 11, [5, 17, 53]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [0]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [0]]
+REQ[11]: [37, [0]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [0]]
+Player[11] shot[[0]]
+REQ[11]: [37, [0]]
+Player[11] TURN CHEAT
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [0]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [0]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [1]]
+REQ[12]: [37, [1]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [1]]
+Player[12] shot[[1]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [1]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [1]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [53]]
+REQ[11]: [37, [53]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [53]]
+Player[11] shot[[53]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [53]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [53]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [52]]
+REQ[12]: [37, [52]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [52]]
+Player[12] shot[[52]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [52]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [52]]
+listening on 8080
+304 GET / (::1) 8.78ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+404 GET /static/js/phaser.map (::1) 0.98ms
+101 GET /ws (::1) 0.98ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 1, [7, 9, 13, 15, 17, 18, 21, 23, 24, 28, 29, 33, 34, 36, 37, 44, 47]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x000001BB49755D30>, <core.robot.AiPlayer object at 0x000001BB49755B70>, <core.robot.AiPlayer object at 0x000001BB49755B38>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [0, 2, 4, 6, 12, 19, 22, 27, 30, 32, 39, 41, 45, 48, 50, 52, 53]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [1, 3, 5, 8, 11, 14, 16, 20, 25, 31, 38, 40, 42, 43, 46, 49, 51]]
+REQ[1]: [33, 0]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 0, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 0, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 0, False]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 11, [10, 26, 35]]
+Player[11] IS LANDLORD[[10, 26, 35]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 11, [10, 26, 35]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 11, [10, 26, 35]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [0]]
+REQ[11]: [37, [0]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [0]]
+Player[11] shot[[0]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [0]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [0]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [0]]
+REQ[11]: [37, [0]]
+Player[11] TURN CHEAT
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [1]]
+REQ[12]: [37, [1]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [1]]
+Player[12] shot[[1]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [1]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [1]]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [53]]
+REQ[11]: [37, [53]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [53]]
+Player[11] shot[[53]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [53]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [53]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[1]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+Player[1] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [2]]
+REQ[11]: [37, [2]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [2]]
+Player[11] shot[[2]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [2]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [2]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [3]]
+REQ[12]: [37, [3]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [3]]
+Player[12] shot[[3]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [3]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [3]]
+REQ[1]: [37, [47]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [47]]
+Player[1] shot[[47]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [47]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [47]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [22]]
+REQ[11]: [37, [22]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [22]]
+Player[11] shot[[22]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [22]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [22]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [49]]
+REQ[12]: [37, [49]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [49]]
+Player[12] shot[[49]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [49]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [49]]
+REQ[1]: [37, [13]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [13]]
+Player[1] shot[[13]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [13]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [13]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [27]]
+REQ[11]: [37, [27]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [27]]
+Player[11] shot[[27]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [27]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [27]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+listening on 8080
+304 GET / (::1) 8.78ms
+404 GET /robots.txt (::1) 1.95ms
+304 GET /static/i/preload.png (::1) 238.14ms
+304 GET /static/s/bg3.ogg (::1) 2.93ms
+404 GET /static/s/deal.ogg (::1) 0.97ms
+304 GET /static/s/lose.ogg (::1) 3.90ms
+304 GET /static/s/win.ogg (::1) 1.95ms
+304 GET /static/i/btn.png (::1) 3.91ms
+304 GET /static/i/bg.png (::1) 2.93ms
+304 GET /static/i/poker.png (::1) 0.98ms
+304 GET /static/rule.json (::1) 1.95ms
+304 GET /static/i/btn.json (::1) 3.91ms
+101 GET /ws (::1) 0.98ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [3, 7, 16, 20, 24, 26, 32, 35, 36, 37, 42, 44, 47, 48, 50, 51, 53]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x0000029AC50B7F28>, <core.robot.AiPlayer object at 0x0000029AC5044390>, <core.robot.AiPlayer object at 0x0000029AC505B940>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 6, 9, 14, 15, 19, 27, 28, 29, 31, 33, 38, 39, 41, 43, 45, 46]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 2, 4, 5, 8, 10, 11, 12, 13, 17, 21, 22, 23, 30, 34, 49, 52]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[1]: [33, 0]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 0, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 0, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 0, False]
+SOCKET[1] CLOSE
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+Uncaught exception GET /ws (::1)
+HTTPServerRequest(protocol='http', host='localhost:8080', method='GET', uri='/ws', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "C:\Program Files\Python36\lib\site-packages\tornado\web.py", line 1499, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "<string>", line 4, in raise_exc_info
+  File "C:\Program Files\Python36\lib\site-packages\tornado\stack_context.py", line 315, in wrapped
+    ret = fn(*args, **kwargs)
+  File "C:\Users\13735\IdeaProjects\doudizhu\handlers\socket.py", line 99, in on_message
+    self.handle_call_score(packet)
+  File "C:\Users\13735\IdeaProjects\doudizhu\handlers\socket.py", line 21, in wrapper
+    method(socket, packet)
+  File "C:\Users\13735\IdeaProjects\doudizhu\handlers\socket.py", line 118, in handle_call_score
+    self.player.handle_call_score(score)
+  File "C:\Users\13735\IdeaProjects\doudizhu\core\player.py", line 45, in handle_call_score
+    call_end = score == 3 or self.table.all_called()
+  File "C:\Users\13735\IdeaProjects\doudizhu\core\table.py", line 162, in all_called
+    if not p.is_called:
+AttributeError: 'NoneType' object has no attribute 'is_called'
+304 GET / (::1) 0.98ms
+listening on 8080
+200 GET / (::1) 7.81ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+101 GET /ws (::1) 0.98ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 4, 8, 10, 12, 13, 18, 21, 23, 24, 32, 33, 38, 40, 42, 50, 51]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x000001FD56B76D68>, <core.robot.AiPlayer object at 0x000001FD56B76A90>, <core.robot.AiPlayer object at 0x000001FD56B76A58>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 3, 7, 9, 14, 15, 17, 20, 25, 27, 29, 31, 43, 45, 47, 49, 52]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [2, 5, 6, 11, 16, 19, 22, 26, 28, 34, 35, 36, 37, 41, 44, 46, 48]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[1]: [33, 3]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [39, 30, 53]]
+hand card[1, 4, 8, 10, 12, 13, 18, 21, 23, 24, 32, 33, 38, 40, 42, 50, 51, 39, 30, 53]
+hand card[1, 4, 8, 10, 12, 13, 18, 21, 23, 24, 32, 33, 38, 40, 42, 50, 51, 39, 30, 53]
+hand card[1, 4, 8, 10, 12, 13, 18, 21, 23, 24, 32, 33, 38, 40, 42, 50, 51, 39, 30, 53]
+Player[1] IS LANDLORD[[39, 30, 53]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [39, 30, 53]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [39, 30, 53]]
+404 GET /static/js/phaser.map (::1) 0.97ms
+304 GET / (::1) 5.85ms
+SOCKET[1] CLOSE
+listening on 8080
+200 GET / (::1) 291.82ms
+304 GET /static/i/preload.png (::1) 183.49ms
+304 GET /static/s/bg3.ogg (::1) 28.30ms
+404 GET /static/s/deal.ogg (::1) 0.97ms
+304 GET /static/s/lose.ogg (::1) 46.85ms
+304 GET /static/s/win.ogg (::1) 29.28ms
+304 GET /static/i/poker.png (::1) 5.85ms
+304 GET /static/rule.json (::1) 2.91ms
+304 GET /static/i/bg.png (::1) 3.91ms
+304 GET /static/i/btn.png (::1) 12.68ms
+304 GET /static/i/btn.json (::1) 1.96ms
+404 GET /static/js/phaser.map (::1) 0.98ms
+101 GET /ws (::1) 0.97ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [3, 5, 7, 8, 10, 11, 12, 14, 15, 16, 19, 23, 24, 25, 27, 31, 44]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x000001C60FA34BE0>, <core.robot.AiPlayer object at 0x000001C60F9C4400>, <core.robot.AiPlayer object at 0x000001C60FA34908>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 6, 9, 17, 18, 21, 22, 26, 28, 35, 36, 37, 38, 39, 43, 45, 49]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [2, 4, 13, 20, 29, 30, 32, 33, 34, 40, 41, 42, 46, 47, 48, 51, 53]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[1]: [33, 3]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [50, 0, 52]]
+hand card[3, 5, 7, 8, 10, 11, 12, 14, 15, 16, 19, 23, 24, 25, 27, 31, 44, 50, 0, 52]
+hand card[3, 5, 7, 8, 10, 11, 12, 14, 15, 16, 19, 23, 24, 25, 27, 31, 44, 50, 0, 52]
+hand card[3, 5, 7, 8, 10, 11, 12, 14, 15, 16, 19, 23, 24, 25, 27, 31, 44, 50, 0, 52]
+Player[1] IS LANDLORD[[50, 0, 52]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [50, 0, 52]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [50, 0, 52]]
+REQ[1]: [37, [15]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+Player[1] shot[[15]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [17]]
+REQ[11]: [37, [17]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [17]]
+Player[11] shot[[17]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [17]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [17]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [32]]
+REQ[12]: [37, [32]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [32]]
+Player[12] shot[[32]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [32]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [32]]
+REQ[1]: 37
+Uncaught exception in /ws
+Traceback (most recent call last):
+  File "C:\Program Files\Python36\lib\site-packages\tornado\websocket.py", line 498, in _run_callback
+    result = callback(*args, **kwargs)
+  File "C:\Users\13735\IdeaProjects\doudizhu\handlers\socket.py", line 62, in on_message
+    code = packet[0]
+TypeError: 'int' object is not subscriptable
+SOCKET[1] CLOSE
+304 GET / (::1) 0.97ms
+404 GET /static/js/phaser.map (::1) 0.97ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+101 GET /ws (::1) 0.98ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[2]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+REQ[11]: [19, 2]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[2]
+REQ[12]: [19, 2]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[2]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [3, 5, 14, 15, 16, 20, 21, 27, 32, 35, 38, 39, 42, 44, 46, 48, 51]]
+TABLE[2] GAME BEGIN[[<core.player.Player object at 0x000001C60FA447F0>, <core.robot.AiPlayer object at 0x000001C60F9DBA20>, <core.robot.AiPlayer object at 0x000001C60FA44550>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [2, 4, 6, 8, 9, 12, 17, 19, 22, 23, 26, 31, 36, 37, 43, 50, 52]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 1, 7, 10, 11, 13, 18, 24, 25, 28, 29, 30, 34, 40, 41, 45, 53]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[1]: [33, 2]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 2, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 2, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 2, False]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [49, 33, 47]]
+hand card[3, 5, 14, 15, 16, 20, 21, 27, 32, 35, 38, 39, 42, 44, 46, 48, 51, 49, 33, 47]
+hand card[3, 5, 14, 15, 16, 20, 21, 27, 32, 35, 38, 39, 42, 44, 46, 48, 51, 49, 33, 47]
+hand card[3, 5, 14, 15, 16, 20, 21, 27, 32, 35, 38, 39, 42, 44, 46, 48, 51, 49, 33, 47]
+Player[1] IS LANDLORD[[49, 33, 47]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [49, 33, 47]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [49, 33, 47]]
+REQ[1]: [37, 15]
+Uncaught exception in /ws
+Traceback (most recent call last):
+  File "C:\Program Files\Python36\lib\site-packages\tornado\websocket.py", line 498, in _run_callback
+    result = callback(*args, **kwargs)
+  File "C:\Users\13735\IdeaProjects\doudizhu\handlers\socket.py", line 107, in on_message
+    self.handle_shot_poker(packet)
+  File "C:\Users\13735\IdeaProjects\doudizhu\handlers\socket.py", line 21, in wrapper
+    method(socket, packet)
+  File "C:\Users\13735\IdeaProjects\doudizhu\handlers\socket.py", line 123, in handle_shot_poker
+    self.player.handle_shot_poker(pokers)
+  File "C:\Users\13735\IdeaProjects\doudizhu\core\player.py", line 63, in handle_shot_poker
+    if not rule.is_contains(self.hand_pokers, pokers):
+  File "C:\Users\13735\IdeaProjects\doudizhu\core\rule.py", line 34, in is_contains
+    parent, child = Counter(parent), Counter(child)
+  File "C:\Program Files\Python36\lib\collections\__init__.py", line 535, in __init__
+    self.update(*args, **kwds)
+  File "C:\Program Files\Python36\lib\collections\__init__.py", line 622, in update
+    _count_elements(self, iterable)
+TypeError: 'int' object is not iterable
+SOCKET[1] CLOSE
+304 GET / (::1) 1.95ms
+404 GET /static/js/phaser.map (::1) 0.98ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+101 GET /ws (::1) 0.00ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[3]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+REQ[11]: [19, 3]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[3]
+REQ[12]: [19, 3]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[3]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 11, [0, 1, 3, 7, 8, 12, 15, 18, 29, 30, 33, 35, 37, 42, 43, 47, 53]]
+TABLE[3] GAME BEGIN[[<core.player.Player object at 0x000001C60F9C4B00>, <core.robot.AiPlayer object at 0x000001C60FA44CC0>, <core.robot.AiPlayer object at 0x000001C60FA44B38>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [10, 14, 16, 19, 20, 22, 24, 26, 27, 31, 36, 38, 41, 48, 49, 50, 52]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [2, 4, 5, 9, 11, 17, 21, 23, 25, 28, 32, 34, 39, 40, 45, 46, 51]]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[1]: [33, 3]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [13, 44, 6]]
+hand card[0, 1, 3, 7, 8, 12, 15, 18, 29, 30, 33, 35, 37, 42, 43, 47, 53, 13, 44, 6]
+hand card[0, 1, 3, 7, 8, 12, 15, 18, 29, 30, 33, 35, 37, 42, 43, 47, 53, 13, 44, 6]
+hand card[0, 1, 3, 7, 8, 12, 15, 18, 29, 30, 33, 35, 37, 42, 43, 47, 53, 13, 44, 6]
+Player[1] IS LANDLORD[[13, 44, 6]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [13, 44, 6]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [13, 44, 6]]
+REQ[1]: [37, [15]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+Player[1] shot[[15]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [16]]
+REQ[11]: [37, [16]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+Player[11] shot[[16]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [4]]
+REQ[12]: [37, [4]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+Player[12] shot[[4]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+304 GET / (::1) 2.93ms
+SOCKET[1] CLOSE
+404 GET /static/js/phaser.map (::1) 1.95ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+101 GET /ws (::1) 0.98ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[4]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 4]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 4]
+REQ[11]: [19, 4]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[4]
+REQ[12]: [19, 4]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[4]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 1, [0, 1, 2, 3, 5, 8, 9, 13, 14, 15, 17, 19, 26, 32, 44, 48, 49]]
+TABLE[4] GAME BEGIN[[<core.player.Player object at 0x000001C60FA6E518>, <core.robot.AiPlayer object at 0x000001C60FA8DE48>, <core.robot.AiPlayer object at 0x000001C60FA6E198>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [11, 12, 18, 21, 24, 25, 27, 28, 30, 31, 33, 36, 37, 38, 43, 50, 51]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 1, [6, 7, 10, 16, 20, 22, 23, 34, 35, 39, 40, 41, 42, 45, 47, 52, 53]]
+REQ[1]: [33, 3]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [4, 46, 29]]
+hand card[0, 1, 2, 3, 5, 8, 9, 13, 14, 15, 17, 19, 26, 32, 44, 48, 49, 4, 46, 29]
+hand card[0, 1, 2, 3, 5, 8, 9, 13, 14, 15, 17, 19, 26, 32, 44, 48, 49, 4, 46, 29]
+hand card[0, 1, 2, 3, 5, 8, 9, 13, 14, 15, 17, 19, 26, 32, 44, 48, 49, 4, 46, 29]
+Player[1] IS LANDLORD[[4, 46, 29]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [4, 46, 29]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [4, 46, 29]]
+REQ[1]: [37, [15]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+Player[1] shot[[15]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 1, [15]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [30]]
+REQ[11]: [37, [30]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [30]]
+Player[11] shot[[30]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [30]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [30]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [6]]
+REQ[12]: [37, [6]]
+RSP[1]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [6]]
+Player[12] shot[[6]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [6]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [6]]
+REQ[1]: [37, [15]]
+Player[1] play non-exist poker
+REQ[1]: [37, [16]]
+Player[1] play non-exist poker
+REQ[1]: [37, [17]]
+Player[1] play small than last shot poker
+SOCKET[1] CLOSE
+listening on 8080
+200 GET / (::1) 14.66ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 483.43ms
+200 GET /static/js/rule.js?v=6bd4ef716659f64ce7239adc08c0ce6b (::1) 20.84ms
+304 GET /static/i/preload.png (::1) 1.95ms
+304 GET /static/s/bg3.ogg (::1) 3.52ms
+404 GET /static/s/deal.ogg (::1) 1.96ms
+304 GET /static/s/win.ogg (::1) 2.91ms
+304 GET /static/s/lose.ogg (::1) 2.71ms
+304 GET /static/i/btn.png (::1) 1.95ms
+304 GET /static/i/bg.png (::1) 1.95ms
+304 GET /static/rule.json (::1) 2.93ms
+304 GET /static/i/poker.png (::1) 1.93ms
+304 GET /static/i/btn.json (::1) 1.50ms
+404 GET /favicon.ico (::1) 0.98ms
+101 GET /ws (::1) 1.07ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [6, 11, 14, 16, 17, 22, 28, 29, 33, 34, 40, 42, 44, 46, 48, 49, 52]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x000001BC21821B00>, <core.robot.AiPlayer object at 0x000001BC21821940>, <core.robot.AiPlayer object at 0x000001BC21821908>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [5, 7, 9, 13, 15, 20, 21, 24, 25, 26, 32, 35, 39, 45, 47, 51, 53]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 2, 3, 4, 8, 10, 12, 18, 23, 27, 30, 31, 36, 38, 41, 43, 50]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+404 GET /static/js/phaser.map (::1) 0.98ms
+REQ[1]: [33, 3]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+RSP[1]: [<Protocol.RSP_SHOW_POKER: 36>, 1, [37, 19, 0]]
+hand card[6, 11, 14, 16, 17, 22, 28, 29, 33, 34, 40, 42, 44, 46, 48, 49, 52, 37, 19, 0]
+hand card[6, 11, 14, 16, 17, 22, 28, 29, 33, 34, 40, 42, 44, 46, 48, 49, 52, 37, 19, 0]
+hand card[6, 11, 14, 16, 17, 22, 28, 29, 33, 34, 40, 42, 44, 46, 48, 49, 52, 37, 19, 0]
+Player[1] IS LANDLORD[[37, 19, 0]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 1, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [37, 19, 0]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 1, [37, 19, 0]]
+200 GET / (::1) 1.95ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 20.50ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 17.57ms
+200 GET /static/js/rule.js?v=6bd4ef716659f64ce7239adc08c0ce6b (::1) 18.54ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 18.54ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 14.64ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 22.44ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 26.35ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 85.89ms
+200 GET /static/i/preload.png (::1) 5.85ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 5.86ms
+200 GET /static/s/win.ogg (::1) 22.45ms
+200 GET /static/s/bg3.ogg (::1) 38.06ms
+200 GET /static/i/btn.png (::1) 5.85ms
+404 GET /favicon.ico (::1) 0.98ms
+200 GET /static/i/poker.png (::1) 14.64ms
+200 GET /static/i/btn.json (::1) 26.35ms
+200 GET /static/i/bg.png (::1) 69.29ms
+200 GET /static/rule.json (::1) 64.42ms
+SOCKET[1] CLOSE
+404 GET /static/s/deal.ogg (::1) 0.98ms
+404 GET /favicon.ico (::1) 0.97ms
+101 GET /ws (::1) 0.97ms
+SOCKET[1] OPEN
+REQ[1]: [17, 1]
+RSP[1]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[1]: [19, -1]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (-1, ''), (-1, '')]]
+PLAYER[1] JOIN TABLE[2]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+REQ[11]: [19, 2]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[2]
+REQ[12]: [19, 2]
+RSP[1]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[2]
+RSP[1]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 2, 10, 12, 14, 20, 24, 31, 32, 33, 34, 36, 37, 39, 40, 47, 53]]
+TABLE[2] GAME BEGIN[[<core.player.Player object at 0x000001BC218519E8>, <core.robot.AiPlayer object at 0x000001BC21851358>, <core.robot.AiPlayer object at 0x000001BC218516A0>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(1, 'zjh'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 3, 5, 9, 11, 13, 17, 18, 22, 23, 26, 29, 30, 43, 45, 51, 52]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [4, 6, 7, 8, 15, 16, 19, 21, 25, 28, 35, 38, 41, 46, 48, 49, 50]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[1]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+304 GET / (::1) 0.98ms
+404 GET /static/js/phaser.map (::1) 0.98ms
+SOCKET[1] CLOSE
+200 GET / (::1) 0.97ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 13.66ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 12.69ms
+200 GET /static/js/rule.js?v=6bd4ef716659f64ce7239adc08c0ce6b (::1) 9.75ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 8.78ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 6.83ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 5.86ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 3.90ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 42.94ms
+200 GET /static/i/preload.png (::1) 2.93ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 4.88ms
+200 GET /static/s/win.ogg (::1) 5.86ms
+200 GET /static/s/bg3.ogg (::1) 14.64ms
+404 GET /favicon.ico (::1) 2.93ms
+200 GET /static/i/btn.png (::1) 1.95ms
+200 GET /static/i/bg.png (::1) 2.92ms
+200 GET /static/i/btn.json (::1) 5.85ms
+200 GET /static/i/poker.png (::1) 12.69ms
+200 GET /static/rule.json (::1) 21.47ms
+200 POST /reg (::1) 363.07ms
+101 GET /ws (::1) 0.00ms
+SOCKET[2] OPEN
+REQ[2]: [17, 1]
+RSP[2]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[2]: [19, -1]
+RSP[2]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(2, 'hack'), (-1, ''), (-1, '')]]
+PLAYER[2] JOIN TABLE[3]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+REQ[11]: [19, 3]
+RSP[2]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(2, 'hack'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[3]
+REQ[12]: [19, 3]
+RSP[2]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(2, 'hack'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[3]
+RSP[2]: [<Protocol.RSP_DEAL_POKER: 32>, 2, [0, 2, 3, 5, 7, 8, 15, 16, 20, 25, 27, 30, 32, 33, 35, 36, 47]]
+TABLE[3] GAME BEGIN[[<core.player.Player object at 0x000001BC21843240>, <core.robot.AiPlayer object at 0x000001BC21835470>, <core.robot.AiPlayer object at 0x000001BC21851FD0>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(2, 'hack'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(2, 'hack'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(2, 'hack'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 2, [1, 4, 6, 10, 12, 13, 14, 19, 22, 23, 26, 29, 42, 44, 48, 52, 53]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 2, [9, 11, 17, 18, 21, 24, 28, 31, 34, 37, 38, 39, 41, 45, 46, 49, 50]]
+200 GET / (::1) 0.98ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 17.57ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 14.64ms
+200 GET /static/js/rule.js?v=6bd4ef716659f64ce7239adc08c0ce6b (::1) 14.64ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 12.69ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 10.73ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 10.73ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 10.74ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 56.60ms
+200 GET /static/i/preload.png (::1) 3.90ms
+404 GET /favicon.ico (::1) 3.91ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 10.74ms
+200 GET /static/s/win.ogg (::1) 11.71ms
+200 GET /static/s/bg3.ogg (::1) 25.38ms
+200 GET /static/i/btn.png (::1) 3.90ms
+200 GET /static/i/bg.png (::1) 8.79ms
+200 GET /static/i/poker.png (::1) 6.82ms
+200 GET /static/i/btn.json (::1) 14.64ms
+200 GET /static/rule.json (::1) 32.22ms
+SOCKET[2] CLOSE
+200 GET / (::1) 0.98ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 13.66ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 11.71ms
+200 GET /static/js/rule.js?v=6bd4ef716659f64ce7239adc08c0ce6b (::1) 9.76ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 7.81ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 6.83ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 4.88ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 3.90ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 45.87ms
+200 GET /static/i/preload.png (::1) 1.95ms
+404 GET /favicon.ico (::1) 1.96ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 3.90ms
+200 GET /static/s/win.ogg (::1) 7.81ms
+200 GET /static/s/bg3.ogg (::1) 15.62ms
+200 GET /static/i/btn.png (::1) 2.93ms
+200 GET /static/i/bg.png (::1) 9.76ms
+200 GET /static/i/poker.png (::1) 18.55ms
+200 GET /static/i/btn.json (::1) 5.86ms
+200 GET /static/rule.json (::1) 12.69ms
+200 POST /reg (::1) 316.35ms
+101 GET /ws (::1) 1.02ms
+SOCKET[3] OPEN
+REQ[3]: [17, 1]
+RSP[3]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[3]: [19, -1]
+RSP[3]: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(3, '。。。'), (-1, ''), (-1, '')]]
+PLAYER[3] JOIN TABLE[4]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 4]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 4]
+REQ[11]: [19, 4]
+RSP[3]: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(3, '。。。'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[4]
+REQ[12]: [19, 4]
+RSP[3]: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(3, '。。。'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[4]
+RSP[3]: [<Protocol.RSP_DEAL_POKER: 32>, 11, [0, 4, 5, 6, 7, 9, 12, 13, 17, 18, 19, 20, 23, 43, 46, 48, 52]]
+TABLE[4] GAME BEGIN[[<core.player.Player object at 0x000001BC21856FD0>, <core.robot.AiPlayer object at 0x000001BC21856BE0>, <core.robot.AiPlayer object at 0x000001BC21856470>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(3, '。。。'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(3, '。。。'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(3, '。。。'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [15, 16, 21, 22, 24, 25, 26, 27, 28, 32, 34, 37, 38, 39, 45, 49, 53]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [2, 3, 10, 11, 14, 29, 30, 31, 33, 35, 36, 40, 41, 42, 47, 50, 51]]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[3]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[3]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+200 GET / (::1) 0.97ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 15.62ms
+200 GET /static/js/rule.js?v=6bd4ef716659f64ce7239adc08c0ce6b (::1) 13.66ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 7.81ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 7.81ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 12.69ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 4.88ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 3.90ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 49.77ms
+SOCKET[3] CLOSE
+200 GET / (::1) 1.95ms
+200 GET /static/js/rule.js?v=6bd4ef716659f64ce7239adc08c0ce6b (::1) 15.62ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 14.64ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 10.73ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 8.78ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 7.81ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 14.64ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 13.66ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 44.90ms
+200 GET /static/i/preload.png (::1) 1.72ms
+404 GET /favicon.ico (::1) 0.98ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 3.91ms
+200 GET /static/s/win.ogg (::1) 7.81ms
+200 GET /static/s/bg3.ogg (::1) 18.54ms
+200 GET /static/i/btn.png (::1) 1.95ms
+200 GET /static/i/bg.png (::1) 3.91ms
+200 GET /static/i/poker.png (::1) 3.91ms
+200 GET /static/i/btn.json (::1) 8.79ms
+200 GET /static/rule.json (::1) 13.67ms
+200 GET / (::1) 0.98ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 15.62ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 12.69ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 11.71ms
+200 GET /static/js/rule.js?v=6bd4ef716659f64ce7239adc08c0ce6b (::1) 7.81ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 7.81ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 6.83ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 3.91ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 40.99ms
+200 GET /static/i/preload.png (::1) 3.90ms
+404 GET /favicon.ico (::1) 0.98ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 2.93ms
+200 GET /static/s/win.ogg (::1) 6.83ms
+200 GET /static/s/bg3.ogg (::1) 12.69ms
+200 GET /static/i/btn.png (::1) 9.76ms
+200 GET /static/i/btn.json (::1) 5.84ms
+200 GET /static/i/poker.png (::1) 5.86ms
+200 GET /static/i/bg.png (::1) 28.30ms
+200 GET /static/rule.json (::1) 22.44ms
+200 GET / (::1) 0.98ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 12.69ms
+200 GET /static/js/rule.js?v=6bd4ef716659f64ce7239adc08c0ce6b (::1) 31.23ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 33.18ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 44.89ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 43.92ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 7.81ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 12.69ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 86.87ms
+200 GET /static/i/preload.png (::1) 1.95ms
+404 GET /favicon.ico (::1) 0.98ms
+404 GET /static/s/deal.ogg (::1) 0.00ms
+200 GET /static/s/lose.ogg (::1) 4.88ms
+200 GET /static/s/win.ogg (::1) 4.88ms
+200 GET /static/s/bg3.ogg (::1) 12.69ms
+200 GET /static/i/btn.png (::1) 7.81ms
+200 GET /static/i/bg.png (::1) 3.90ms
+200 GET /static/i/poker.png (::1) 7.81ms
+200 GET /static/i/btn.json (::1) 19.51ms
+200 GET /static/rule.json (::1) 23.42ms
+200 GET / (::1) 0.98ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 13.66ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 11.71ms
+200 GET /static/js/rule.js?v=6bd4ef716659f64ce7239adc08c0ce6b (::1) 9.76ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 7.81ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 6.83ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 6.83ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 5.86ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 43.92ms
+200 GET /static/i/preload.png (::1) 4.88ms
+404 GET /favicon.ico (::1) 0.98ms
+404 GET /static/s/deal.ogg (::1) 0.97ms
+200 GET /static/s/lose.ogg (::1) 2.93ms
+200 GET /static/s/win.ogg (::1) 6.83ms
+200 GET /static/s/bg3.ogg (::1) 12.69ms
+200 GET /static/i/btn.png (::1) 1.95ms
+200 GET /static/i/poker.png (::1) 6.83ms
+200 GET /static/i/bg.png (::1) 12.69ms
+200 GET /static/i/btn.json (::1) 2.93ms
+200 GET /static/rule.json (::1) 8.78ms
+200 GET / (::1) 0.97ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 12.70ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 19.52ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 19.54ms
+200 GET /static/js/rule.js?v=6bd4ef716659f64ce7239adc08c0ce6b (::1) 17.56ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 15.62ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 19.52ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 22.44ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 92.72ms
+200 GET /static/i/preload.png (::1) 1.95ms
+404 GET /favicon.ico (::1) 0.98ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 12.70ms
+200 GET /static/s/win.ogg (::1) 20.48ms
+200 GET /static/s/bg3.ogg (::1) 38.05ms
+200 GET /static/i/btn.png (::1) 1.95ms
+200 GET /static/i/btn.json (::1) 7.81ms
+200 GET /static/i/poker.png (::1) 48.80ms
+200 GET /static/rule.json (::1) 75.15ms
+200 GET /static/i/bg.png (::1) 87.84ms
+404 GET /static/js/phaser.map (::1) 2.48ms
+200 POST /reg (::1) 23.43ms
+200 POST /reg (::1) 288.42ms
+101 GET /ws (::1) 0.97ms
+SOCKET[4] OPEN
+REQ[4]: [17, 1]
+RSP[4]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[4]: [19, -1]
+RSP[4]: [<Protocol.RSP_JOIN_TABLE: 20>, 5, [(4, '。。。.'), (-1, ''), (-1, '')]]
+PLAYER[4] JOIN TABLE[5]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 5]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 5]
+REQ[11]: [19, 5]
+RSP[4]: [<Protocol.RSP_JOIN_TABLE: 20>, 5, [(4, '。。。.'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[5]
+REQ[12]: [19, 5]
+RSP[4]: [<Protocol.RSP_JOIN_TABLE: 20>, 5, [(4, '。。。.'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[5]
+RSP[4]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 2, 4, 5, 13, 14, 15, 16, 20, 22, 24, 25, 29, 30, 38, 40, 52]]
+TABLE[5] GAME BEGIN[[<core.player.Player object at 0x000001BC21851748>, <core.robot.AiPlayer object at 0x000001BC2186A710>, <core.robot.AiPlayer object at 0x000001BC2186A978>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 5, [(4, '。。。.'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 5, [(4, '。。。.'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 5, [(4, '。。。.'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [6, 7, 9, 19, 21, 26, 32, 33, 35, 36, 37, 41, 42, 46, 47, 51, 53]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 3, 8, 10, 11, 18, 23, 27, 28, 31, 34, 39, 43, 44, 45, 49, 50]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[4]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[4]: [37, [2]]
+RSP[4]: [<Protocol.RSP_SHOT_POKER: 38>, 4, [2]]
+Player[4] shot[[2]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 4, [2]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 4, [2]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [42]]
+REQ[11]: [37, [42]]
+RSP[4]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [42]]
+Player[11] shot[[42]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [42]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [42]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [43]]
+REQ[12]: [37, [43]]
+RSP[4]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+Player[12] shot[[43]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+SOCKET[4] CLOSE
+listening on 8080
+200 GET / (::1) 9.76ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 19.52ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 16.59ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 15.61ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 12.68ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 4.87ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 9.76ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 2.93ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 224.48ms
+200 GET /static/i/preload.png (::1) 1.95ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 6.83ms
+200 GET /static/s/win.ogg (::1) 5.86ms
+200 GET /static/s/bg3.ogg (::1) 15.62ms
+200 GET /static/i/btn.png (::1) 5.86ms
+404 GET /favicon.ico (::1) 0.98ms
+200 GET /static/i/btn.json (::1) 9.76ms
+200 GET /static/i/poker.png (::1) 13.66ms
+200 GET /static/i/bg.png (::1) 49.78ms
+200 GET /static/rule.json (::1) 20.49ms
+200 POST /reg (::1) 301.96ms
+101 GET /ws (::1) 0.98ms
+SOCKET[5] OPEN
+REQ[5]: [17, 1]
+RSP[5]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[5]: [19, -1]
+RSP[5]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(5, 'sss'), (-1, ''), (-1, '')]]
+PLAYER[5] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[5]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(5, 'sss'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[5]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(5, 'sss'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[5]: [<Protocol.RSP_DEAL_POKER: 32>, 11, [0, 1, 4, 6, 7, 11, 14, 18, 21, 23, 27, 30, 42, 45, 49, 51, 53]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x000001D934FB9FD0>, <core.robot.AiPlayer object at 0x000001D934F566A0>, <core.robot.AiPlayer object at 0x000001D934FC0198>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(5, 'sss'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(5, 'sss'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(5, 'sss'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [2, 8, 13, 19, 22, 25, 33, 34, 36, 37, 39, 40, 41, 44, 46, 47, 50]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [3, 5, 9, 10, 12, 15, 16, 17, 20, 24, 26, 29, 31, 32, 35, 43, 48]]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[5]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[5]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[5]: [33, 3]
+RSP[5]: [<Protocol.RSP_CALL_SCORE: 34>, 5, 3, True]
+RSP[5]: [<Protocol.RSP_SHOW_POKER: 36>, 5, [38, 28, 52]]
+hand card[0, 1, 4, 6, 7, 11, 14, 18, 21, 23, 27, 30, 42, 45, 49, 51, 53, 38, 28, 52]
+Player[5] IS LANDLORD[[38, 28, 52]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 5, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 5, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 5, [38, 28, 52]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 5, [38, 28, 52]]
+SOCKET[5] CLOSE
+200 GET / (::1) 0.98ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 14.64ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 13.66ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 9.76ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 7.81ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 6.83ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 10.74ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 3.90ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 42.94ms
+200 GET /static/i/preload.png (::1) 4.88ms
+404 GET /favicon.ico (::1) 0.00ms
+404 GET /static/s/deal.ogg (::1) 0.97ms
+200 GET /static/s/lose.ogg (::1) 2.92ms
+200 GET /static/s/win.ogg (::1) 5.85ms
+200 GET /static/s/bg3.ogg (::1) 12.69ms
+200 GET /static/i/btn.png (::1) 1.95ms
+200 GET /static/i/bg.png (::1) 3.90ms
+200 GET /static/i/poker.png (::1) 5.85ms
+200 GET /static/i/btn.json (::1) 12.69ms
+200 GET /static/rule.json (::1) 19.52ms
+200 POST /reg (::1) 312.36ms
+101 GET /ws (::1) 0.98ms
+SOCKET[6] OPEN
+REQ[6]: [17, 1]
+RSP[6]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[6]: [19, -1]
+RSP[6]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(6, 'aa'), (-1, ''), (-1, '')]]
+PLAYER[6] JOIN TABLE[2]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+REQ[11]: [19, 2]
+RSP[6]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(6, 'aa'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[2]
+REQ[12]: [19, 2]
+RSP[6]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(6, 'aa'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[2]
+RSP[6]: [<Protocol.RSP_DEAL_POKER: 32>, 11, [2, 3, 6, 11, 17, 18, 21, 22, 23, 27, 31, 34, 41, 47, 49, 51, 53]]
+TABLE[2] GAME BEGIN[[<core.player.Player object at 0x000001D934FD36A0>, <core.robot.AiPlayer object at 0x000001D934FD3828>, <core.robot.AiPlayer object at 0x000001D934FD3AC8>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(6, 'aa'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(6, 'aa'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(6, 'aa'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [0, 1, 4, 8, 9, 10, 14, 24, 25, 26, 32, 33, 39, 40, 43, 46, 48]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [5, 7, 12, 13, 15, 16, 19, 20, 29, 30, 35, 37, 38, 42, 44, 50, 52]]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[6]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[6]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[6]: [33, 3]
+RSP[6]: [<Protocol.RSP_CALL_SCORE: 34>, 6, 3, True]
+RSP[6]: [<Protocol.RSP_SHOW_POKER: 36>, 6, [28, 36, 45]]
+hand card[2, 3, 6, 11, 17, 18, 21, 22, 23, 27, 31, 34, 41, 47, 49, 51, 53, 28, 36, 45]
+Player[6] IS LANDLORD[[28, 36, 45]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 6, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 6, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 6, [28, 36, 45]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 6, [28, 36, 45]]
+REQ[6]: [37, [2]]
+RSP[6]: [<Protocol.RSP_SHOT_POKER: 38>, 6, [2]]
+Player[6] shot[[2]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 6, [2]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 6, [2]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [4]]
+REQ[11]: [37, [4]]
+RSP[6]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+Player[11] shot[[4]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [5]]
+REQ[12]: [37, [5]]
+RSP[6]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [5]]
+Player[12] shot[[5]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [5]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [5]]
+SOCKET[6] CLOSE
+200 GET / (::1) 3.91ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 11.71ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 9.76ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 8.78ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 6.83ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 5.86ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 7.81ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 5.86ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 37.10ms
+200 GET /static/i/preload.png (::1) 1.95ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 3.90ms
+200 GET /static/s/win.ogg (::1) 10.74ms
+200 GET /static/s/bg3.ogg (::1) 21.47ms
+200 GET /static/i/btn.png (::1) 5.86ms
+404 GET /favicon.ico (::1) 1.94ms
+200 GET /static/i/bg.png (::1) 65.38ms
+200 GET /static/i/btn.json (::1) 30.26ms
+200 GET /static/i/poker.png (::1) 18.55ms
+200 GET /static/rule.json (::1) 41.97ms
+200 POST /reg (::1) 297.69ms
+101 GET /ws (::1) 0.98ms
+SOCKET[7] OPEN
+REQ[7]: [17, 1]
+RSP[7]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[7]: [19, -1]
+RSP[7]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(7, 'bb'), (-1, ''), (-1, '')]]
+PLAYER[7] JOIN TABLE[3]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+REQ[11]: [19, 3]
+RSP[7]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(7, 'bb'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[3]
+REQ[12]: [19, 3]
+RSP[7]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(7, 'bb'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[3]
+RSP[7]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 3, 7, 9, 16, 18, 21, 22, 25, 33, 36, 42, 43, 44, 49, 51, 53]]
+TABLE[3] GAME BEGIN[[<core.player.Player object at 0x000001D934FB9B00>, <core.robot.AiPlayer object at 0x000001D934F564E0>, <core.robot.AiPlayer object at 0x000001D934FC0B00>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(7, 'bb'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(7, 'bb'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(7, 'bb'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 2, 4, 5, 6, 8, 13, 14, 15, 17, 19, 24, 26, 30, 46, 47, 50]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [10, 12, 20, 23, 27, 29, 31, 32, 35, 37, 38, 39, 40, 41, 45, 48, 52]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[7]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[7]: [33, 3]
+RSP[7]: [<Protocol.RSP_CALL_SCORE: 34>, 7, 3, True]
+RSP[7]: [<Protocol.RSP_SHOW_POKER: 36>, 7, [28, 34, 11]]
+hand card[1, 3, 7, 9, 16, 18, 21, 22, 25, 33, 36, 42, 43, 44, 49, 51, 53, 28, 34, 11]
+Player[7] IS LANDLORD[[28, 34, 11]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 7, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 7, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 7, [28, 34, 11]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 7, [28, 34, 11]]
+REQ[7]: [37, [28]]
+RSP[7]: [<Protocol.RSP_SHOT_POKER: 38>, 7, [28]]
+Player[7] shot[[28]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 7, [28]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 7, [28]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [4]]
+REQ[11]: [37, [4]]
+RSP[7]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+Player[11] shot[[4]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [31]]
+REQ[12]: [37, [31]]
+RSP[7]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [31]]
+Player[12] shot[[31]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [31]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [31]]
+REQ[7]: [37, [29]]
+Player[7] play non-exist poker
+REQ[7]: [37, [20]]
+Player[7] play non-exist poker
+REQ[7]: [37, [33]]
+RSP[7]: [<Protocol.RSP_SHOT_POKER: 38>, 7, [33]]
+Player[7] shot[[33]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 7, [33]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 7, [33]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [8]]
+REQ[11]: [37, [8]]
+RSP[7]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [8]]
+Player[11] shot[[8]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [8]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [8]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [35]]
+REQ[12]: [37, [35]]
+RSP[7]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [35]]
+Player[12] shot[[35]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [35]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [35]]
+SOCKET[7] CLOSE
+listening on 8080
+200 GET / (::1) 11.71ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 26.35ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 18.55ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 17.57ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 16.59ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 14.64ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 14.64ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 4.88ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 344.53ms
+200 GET /static/i/preload.png (::1) 1.95ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 4.88ms
+200 GET /static/s/win.ogg (::1) 11.71ms
+200 GET /static/s/bg3.ogg (::1) 19.51ms
+200 GET /static/i/btn.png (::1) 1.95ms
+200 GET /static/i/bg.png (::1) 21.48ms
+404 GET /favicon.ico (::1) 0.00ms
+200 GET /static/i/btn.json (::1) 20.51ms
+200 GET /static/i/poker.png (::1) 16.59ms
+200 GET /static/rule.json (::1) 22.44ms
+200 POST /reg (::1) 300.46ms
+101 GET /ws (::1) 0.00ms
+SOCKET[8] OPEN
+REQ[8]: [17, 1]
+RSP[8]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[8]: [19, -1]
+RSP[8]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(8, 'rr'), (-1, ''), (-1, '')]]
+PLAYER[8] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[8]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(8, 'rr'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[8]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(8, 'rr'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[8]: [<Protocol.RSP_DEAL_POKER: 32>, 8, [0, 1, 7, 8, 12, 14, 24, 25, 34, 36, 38, 39, 40, 42, 49, 51, 53]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x0000027C020E2B38>, <core.robot.AiPlayer object at 0x0000027C020CD2B0>, <core.robot.AiPlayer object at 0x0000027C020E2BA8>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(8, 'rr'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(8, 'rr'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(8, 'rr'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 8, [2, 3, 4, 9, 10, 11, 13, 17, 20, 26, 28, 32, 37, 41, 46, 50, 52]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 8, [5, 6, 15, 16, 18, 19, 21, 23, 27, 29, 30, 31, 33, 35, 45, 47, 48]]
+REQ[8]: [33, 3]
+RSP[8]: [<Protocol.RSP_CALL_SCORE: 34>, 8, 3, True]
+RSP[8]: [<Protocol.RSP_SHOW_POKER: 36>, 8, [43, 22, 44]]
+hand card[0, 1, 7, 8, 12, 14, 24, 25, 34, 36, 38, 39, 40, 42, 49, 51, 53, 43, 22, 44]
+Player[8] IS LANDLORD[[43, 22, 44]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 8, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 8, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 8, [43, 22, 44]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 8, [43, 22, 44]]
+REQ[8]: [37, [7]]
+RSP[8]: [<Protocol.RSP_SHOT_POKER: 38>, 8, [7]]
+hand left: [0, 1, 8, 12, 14, 24, 25, 34, 36, 38, 39, 40, 42, 49, 51, 53, 43, 22, 44]
+Player[8] shot[[7]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 8, [7]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 8, [7]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [9]]
+REQ[11]: [37, [9]]
+RSP[8]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [9]]
+hand left: [2, 3, 4, 10, 11, 13, 17, 20, 26, 28, 32, 37, 41, 46, 50, 52]
+Player[11] shot[[9]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [9]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [9]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [23]]
+REQ[12]: [37, [23]]
+RSP[8]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [23]]
+hand left: [5, 6, 15, 16, 18, 19, 21, 27, 29, 30, 31, 33, 35, 45, 47, 48]
+Player[12] shot[[23]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [23]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [23]]
+SOCKET[8] CLOSE
+200 GET / (::1) 0.98ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 12.69ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 14.64ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 14.64ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 17.57ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 16.59ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 12.70ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 8.79ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 56.61ms
+200 GET /static/i/preload.png (::1) 1.94ms
+404 GET /favicon.ico (::1) 0.98ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 10.74ms
+200 GET /static/s/win.ogg (::1) 8.78ms
+200 GET /static/s/bg3.ogg (::1) 22.45ms
+200 GET /static/i/btn.png (::1) 1.95ms
+200 GET /static/i/poker.png (::1) 5.87ms
+200 GET /static/i/bg.png (::1) 28.31ms
+200 GET /static/rule.json (::1) 32.21ms
+200 GET /static/i/btn.json (::1) 14.64ms
+200 POST /reg (::1) 446.81ms
+101 GET /ws (::1) 0.98ms
+SOCKET[9] OPEN
+REQ[9]: [17, 1]
+RSP[9]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[9]: [19, -1]
+RSP[9]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(9, 't'), (-1, ''), (-1, '')]]
+PLAYER[9] JOIN TABLE[2]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+REQ[11]: [19, 2]
+RSP[9]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(9, 't'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[2]
+REQ[12]: [19, 2]
+RSP[9]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(9, 't'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[2]
+RSP[9]: [<Protocol.RSP_DEAL_POKER: 32>, 11, [1, 3, 8, 9, 10, 14, 15, 22, 25, 26, 27, 30, 35, 37, 41, 46, 52]]
+TABLE[2] GAME BEGIN[[<core.player.Player object at 0x0000027C020E2B70>, <core.robot.AiPlayer object at 0x0000027C020F25C0>, <core.robot.AiPlayer object at 0x0000027C020F2828>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(9, 't'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(9, 't'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(9, 't'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [0, 4, 6, 7, 17, 19, 20, 23, 24, 28, 31, 33, 34, 39, 47, 48, 51]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [2, 11, 12, 13, 16, 18, 21, 29, 36, 40, 42, 43, 44, 45, 49, 50, 53]]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[9]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[9]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[9]: [33, 3]
+RSP[9]: [<Protocol.RSP_CALL_SCORE: 34>, 9, 3, True]
+RSP[9]: [<Protocol.RSP_SHOW_POKER: 36>, 9, [5, 32, 38]]
+hand card[1, 3, 8, 9, 10, 14, 15, 22, 25, 26, 27, 30, 35, 37, 41, 46, 52, 5, 32, 38]
+Player[9] IS LANDLORD[[5, 32, 38]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 9, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 9, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 9, [5, 32, 38]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 9, [5, 32, 38]]
+REQ[9]: [37, [15]]
+RSP[9]: [<Protocol.RSP_SHOT_POKER: 38>, 9, [15]]
+hand left: [1, 3, 8, 9, 10, 14, 22, 25, 26, 27, 30, 35, 37, 41, 46, 52, 5, 32, 38]
+Player[9] shot[[15]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 9, [15]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 9, [15]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [4]]
+REQ[11]: [37, [4]]
+RSP[9]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+hand left: [0, 6, 7, 17, 19, 20, 23, 24, 28, 31, 33, 34, 39, 47, 48, 51]
+Player[11] shot[[4]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [18]]
+REQ[12]: [37, [18]]
+RSP[9]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [18]]
+hand left: [2, 11, 12, 13, 16, 21, 29, 36, 40, 42, 43, 44, 45, 49, 50, 53]
+Player[12] shot[[18]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [18]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [18]]
+REQ[9]: [37, [2]]
+Player[9] play non-exist poker
+REQ[9]: [37, [16]]
+Player[9] play non-exist poker
+REQ[9]: [37, [21]]
+Player[9] play non-exist poker
+REQ[9]: [37, [8]]
+RSP[9]: [<Protocol.RSP_SHOT_POKER: 38>, 9, [8]]
+hand left: [1, 3, 9, 10, 14, 22, 25, 26, 27, 30, 35, 37, 41, 46, 52, 5, 32, 38]
+Player[9] shot[[8]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 9, [8]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 9, [8]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [48]]
+REQ[11]: [37, [48]]
+RSP[9]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [48]]
+hand left: [0, 6, 7, 17, 19, 20, 23, 24, 28, 31, 33, 34, 39, 47, 51]
+Player[11] shot[[48]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [48]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [48]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [36]]
+REQ[12]: [37, [36]]
+RSP[9]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [36]]
+hand left: [2, 11, 12, 13, 16, 21, 29, 40, 42, 43, 44, 45, 49, 50, 53]
+Player[12] shot[[36]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [36]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [36]]
+listening on 8080
+200 GET / (::1) 8.78ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 18.54ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 16.59ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 13.67ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 7.80ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 5.86ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 7.84ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 4.91ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 235.22ms
+200 GET /static/i/preload.png (::1) 2.93ms
+404 GET /favicon.ico (::1) 2.93ms
+404 GET /static/s/deal.ogg (::1) 0.97ms
+200 GET /static/s/lose.ogg (::1) 3.90ms
+200 GET /static/s/win.ogg (::1) 6.83ms
+200 GET /static/s/bg3.ogg (::1) 15.62ms
+200 GET /static/i/btn.png (::1) 3.91ms
+200 GET /static/i/bg.png (::1) 4.88ms
+200 GET /static/i/poker.png (::1) 5.86ms
+200 GET /static/i/btn.json (::1) 4.88ms
+200 GET /static/rule.json (::1) 18.54ms
+200 POST /reg (::1) 319.11ms
+101 GET /ws (::1) 0.98ms
+SOCKET[10] OPEN
+REQ[10]: [17, 1]
+RSP[10]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[10]: [19, -1]
+RSP[10]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(10, 'r'), (-1, ''), (-1, '')]]
+PLAYER[10] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[10]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(10, 'r'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[10]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(10, 'r'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[10]: [<Protocol.RSP_DEAL_POKER: 32>, 11, [0, 5, 6, 12, 15, 16, 17, 23, 27, 31, 38, 39, 46, 48, 49, 52, 53]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x0000020015188D30>, <core.robot.AiPlayer object at 0x00000200151684A8>, <core.robot.AiPlayer object at 0x00000200151914A8>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(10, 'r'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(10, 'r'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(10, 'r'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [1, 2, 3, 8, 9, 10, 14, 21, 25, 26, 29, 35, 42, 44, 45, 47, 50]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [4, 7, 13, 18, 19, 20, 22, 24, 28, 30, 32, 33, 34, 36, 37, 41, 43]]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[10]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[10]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[10]: [33, 3]
+RSP[10]: [<Protocol.RSP_CALL_SCORE: 34>, 10, 3, True]
+RSP[10]: [<Protocol.RSP_SHOW_POKER: 36>, 10, [11, 51, 40]]
+hand card[0, 5, 6, 12, 15, 16, 17, 23, 27, 31, 38, 39, 46, 48, 49, 52, 53, 11, 51, 40]
+Player[10] IS LANDLORD[[11, 51, 40]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 10, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 10, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 10, [11, 51, 40]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 10, [11, 51, 40]]
+REQ[10]: [37, [15]]
+RSP[10]: [<Protocol.RSP_SHOT_POKER: 38>, 10, [15]]
+hand left: [0, 5, 6, 12, 16, 17, 23, 27, 31, 38, 39, 46, 48, 49, 52, 53, 11, 51, 40]
+Player[10] shot[[15]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 10, [15]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 10, [15]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [3]]
+REQ[11]: [37, [3]]
+RSP[10]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+Player[11] shot[[3]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [4]]
+REQ[12]: [37, [4]]
+RSP[10]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+Player[12] shot[[4]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [4]]
+REQ[10]: [37, [6]]
+RSP[10]: [<Protocol.RSP_SHOT_POKER: 38>, 10, [6]]
+hand left: [0, 5, 12, 16, 17, 23, 27, 31, 38, 39, 46, 48, 49, 52, 53, 11, 51, 40]
+Player[10] shot[[6]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 10, [6]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 10, [6]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [8]]
+REQ[11]: [37, [8]]
+RSP[10]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [8]]
+Player[11] shot[[8]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [8]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [8]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [22]]
+REQ[12]: [37, [22]]
+RSP[10]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [22]]
+Player[12] shot[[22]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [22]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [22]]
+200 GET / (::1) 4.88ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 24.40ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 29.28ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 31.23ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 55.63ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 52.70ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 23.43ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 21.47ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 178.16ms
+200 GET /static/i/preload.png (::1) 6.83ms
+404 GET /favicon.ico (::1) 1.95ms
+404 GET /static/s/deal.ogg (::1) 4.88ms
+200 GET /static/s/lose.ogg (::1) 14.64ms
+200 GET /static/s/win.ogg (::1) 32.74ms
+200 GET /static/s/bg3.ogg (::1) 83.06ms
+200 GET /static/i/btn.png (::1) 7.81ms
+200 GET /static/i/poker.png (::1) 10.74ms
+200 GET /static/i/btn.json (::1) 73.21ms
+200 GET /static/i/bg.png (::1) 154.21ms
+200 GET /static/rule.json (::1) 88.88ms
+200 GET / (::1) 3.92ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 36.11ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 58.56ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 69.30ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 94.67ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 125.90ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 41.00ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 68.32ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 324.99ms
+200 GET /static/i/preload.png (::1) 7.80ms
+404 GET /static/s/deal.ogg (::1) 4.42ms
+200 GET /static/s/lose.ogg (::1) 26.87ms
+200 GET /static/s/win.ogg (::1) 43.47ms
+200 GET /static/s/bg3.ogg (::1) 67.00ms
+200 GET /static/i/btn.png (::1) 9.76ms
+404 GET /favicon.ico (::1) 1.95ms
+200 GET /static/i/poker.png (::1) 15.62ms
+200 GET /static/i/bg.png (::1) 158.64ms
+200 GET /static/i/btn.json (::1) 51.73ms
+200 GET /static/rule.json (::1) 115.37ms
+200 POST /reg (::1) 2938.07ms
+101 GET /ws (::1) 2.93ms
+SOCKET[11] OPEN
+REQ[11]: [17, 1]
+RSP[11]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[11]: [19, -1]
+RSP[11]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(11, 'y'), (-1, ''), (-1, '')]]
+PLAYER[11] JOIN TABLE[2]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+REQ[11]: [19, 2]
+RSP[11]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(11, 'y'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[2]
+REQ[12]: [19, 2]
+RSP[11]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(11, 'y'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[2]
+RSP[11]: [<Protocol.RSP_DEAL_POKER: 32>, 11, [1, 3, 6, 13, 14, 19, 20, 30, 31, 32, 36, 37, 38, 40, 46, 48, 50]]
+TABLE[2] GAME BEGIN[[<core.player.Player object at 0x00000200151A2860>, <core.robot.AiPlayer object at 0x00000200151A2F28>, <core.robot.AiPlayer object at 0x00000200151A2438>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(11, 'y'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(11, 'y'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(11, 'y'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [0, 2, 4, 5, 9, 12, 16, 17, 21, 22, 26, 28, 33, 39, 43, 49, 52]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [8, 10, 11, 15, 23, 24, 27, 29, 34, 35, 41, 42, 44, 45, 47, 51, 53]]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+Player[11] TURN CHEAT
+REQ[11]: [33, 3]
+RSP[11]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 3, True]
+RSP[11]: [<Protocol.RSP_SHOW_POKER: 36>, 11, [7, 18, 25]]
+hand card[1, 3, 6, 13, 14, 19, 20, 30, 31, 32, 36, 37, 38, 40, 46, 48, 50, 7, 18, 25]
+Player[11] IS LANDLORD[[7, 18, 25]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 11, [7, 18, 25]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 11, [7, 18, 25]]
+SOCKET[10] CLOSE
+SOCKET[11] CLOSE
+200 GET / (::1) 2.92ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 12.69ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 14.64ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 11.71ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 12.69ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 12.69ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 8.78ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 7.81ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 48.80ms
+200 GET /static/i/preload.png (::1) 1.95ms
+404 GET /favicon.ico (::1) 0.97ms
+404 GET /static/s/deal.ogg (::1) 1.95ms
+200 GET /static/s/lose.ogg (::1) 4.88ms
+200 GET /static/s/win.ogg (::1) 9.76ms
+200 GET /static/s/bg3.ogg (::1) 19.52ms
+200 GET /static/i/btn.png (::1) 1.95ms
+200 GET /static/i/poker.png (::1) 4.89ms
+200 GET /static/i/bg.png (::1) 12.69ms
+200 GET /static/i/btn.json (::1) 3.90ms
+200 GET /static/rule.json (::1) 26.36ms
+200 POST /reg (::1) 456.61ms
+101 GET /ws (::1) 0.00ms
+SOCKET[12] OPEN
+REQ[12]: [17, 1]
+RSP[12]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[12]: [19, -1]
+RSP[12]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(12, 'u'), (-1, ''), (-1, '')]]
+PLAYER[12] JOIN TABLE[3]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+REQ[11]: [19, 3]
+RSP[12]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(12, 'u'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[3]
+REQ[12]: [19, 3]
+RSP[12]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(12, 'u'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[3]
+RSP[12]: [<Protocol.RSP_DEAL_POKER: 32>, 11, [0, 2, 3, 4, 8, 9, 14, 20, 22, 26, 27, 33, 36, 38, 42, 43, 52]]
+TABLE[3] GAME BEGIN[[<core.player.Player object at 0x00000200151A2588>, <core.robot.AiPlayer object at 0x00000200151A2EB8>, <core.robot.AiPlayer object at 0x00000200151A2470>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(12, 'u'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(12, 'u'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(12, 'u'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [5, 6, 12, 13, 17, 19, 25, 30, 31, 40, 45, 46, 47, 48, 50, 51, 53]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [1, 7, 10, 11, 15, 16, 18, 21, 23, 29, 32, 35, 37, 39, 41, 44, 49]]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[12]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[12]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+SOCKET[12] CLOSE
+listening on 8080
+200 GET / (::1) 6.83ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 15.61ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 14.64ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 11.71ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 10.74ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 5.86ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 10.74ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 7.81ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 209.84ms
+200 GET /static/i/preload.png (::1) 2.93ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 7.82ms
+200 GET /static/s/win.ogg (::1) 14.64ms
+200 GET /static/s/bg3.ogg (::1) 31.22ms
+200 GET /static/i/btn.png (::1) 4.88ms
+200 GET /static/i/bg.png (::1) 23.00ms
+404 GET /favicon.ico (::1) 0.98ms
+200 GET /static/i/poker.png (::1) 7.81ms
+200 GET /static/i/btn.json (::1) 23.43ms
+200 GET /static/rule.json (::1) 32.21ms
+200 POST /reg (::1) 4.88ms
+200 POST /reg (::1) 417.74ms
+101 GET /ws (::1) 0.97ms
+SOCKET[13] OPEN
+REQ[13]: [17, 1]
+RSP[13]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[13]: [19, -1]
+RSP[13]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(13, 'i'), (-1, ''), (-1, '')]]
+PLAYER[13] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[13]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(13, 'i'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[13]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(13, 'i'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[13]: [<Protocol.RSP_DEAL_POKER: 32>, 11, [1, 2, 4, 8, 12, 13, 21, 24, 28, 29, 31, 33, 34, 38, 39, 40, 45]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x0000015E262F7D30>, <core.robot.AiPlayer object at 0x0000015E26294C50>, <core.robot.AiPlayer object at 0x0000015E262FF588>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(13, 'i'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(13, 'i'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(13, 'i'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [0, 6, 7, 10, 11, 16, 17, 18, 20, 30, 35, 43, 44, 46, 48, 51, 53]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [3, 5, 9, 14, 15, 19, 22, 25, 26, 27, 32, 36, 41, 42, 49, 50, 52]]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[13]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[13]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[13]: [33, 3]
+RSP[13]: [<Protocol.RSP_CALL_SCORE: 34>, 13, 3, True]
+RSP[13]: [<Protocol.RSP_SHOW_POKER: 36>, 13, [47, 37, 23]]
+hand card[1, 2, 4, 8, 12, 13, 21, 24, 28, 29, 31, 33, 34, 38, 39, 40, 45, 47, 37, 23]
+Player[13] IS LANDLORD[[47, 37, 23]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 13, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 13, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 13, [47, 37, 23]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 13, [47, 37, 23]]
+REQ[13]: [37, [2]]
+RSP[13]: [<Protocol.RSP_SHOT_POKER: 38>, 13, [2]]
+hand left: [1, 4, 8, 12, 13, 21, 24, 28, 29, 31, 33, 34, 38, 39, 40, 45, 47, 37, 23]
+Player[13] shot[[2]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 13, [2]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 13, [2]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [16]]
+REQ[11]: [37, [16]]
+RSP[13]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+Player[11] shot[[16]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [16]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [5]]
+REQ[12]: [37, [5]]
+RSP[13]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [5]]
+Player[12] shot[[5]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [5]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [5]]
+SOCKET[13] CLOSE
+listening on 8080
+200 GET / (::1) 6.83ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 16.59ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 13.66ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 8.79ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 7.81ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 5.82ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 8.78ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 7.81ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 207.89ms
+200 GET /static/i/preload.png (::1) 2.93ms
+404 GET /favicon.ico (::1) 0.97ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 3.90ms
+200 GET /static/s/win.ogg (::1) 5.86ms
+200 GET /static/s/bg3.ogg (::1) 15.62ms
+200 GET /static/i/btn.png (::1) 2.93ms
+200 GET /static/i/bg.png (::1) 8.78ms
+200 GET /static/i/poker.png (::1) 9.76ms
+200 GET /static/i/btn.json (::1) 8.78ms
+200 GET /static/rule.json (::1) 6.83ms
+200 POST /reg (::1) 312.32ms
+101 GET /ws (::1) 0.98ms
+SOCKET[14] OPEN
+REQ[14]: [17, 1]
+RSP[14]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[14]: [19, -1]
+RSP[14]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(14, 'o'), (-1, ''), (-1, '')]]
+PLAYER[14] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[14]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(14, 'o'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[14]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(14, 'o'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[14]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [2, 4, 7, 12, 21, 24, 26, 32, 34, 35, 36, 40, 41, 42, 46, 48, 53]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x00000189F9C6FC88>, <core.robot.AiPlayer object at 0x00000189F9C05B38>, <core.robot.AiPlayer object at 0x00000189F9C6FCC0>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(14, 'o'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(14, 'o'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(14, 'o'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 3, 5, 9, 11, 13, 14, 15, 16, 19, 20, 30, 33, 39, 44, 47, 50]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 8, 10, 18, 22, 25, 27, 28, 29, 31, 37, 38, 43, 45, 49, 51, 52]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[14]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[14]: [33, 3]
+RSP[14]: [<Protocol.RSP_CALL_SCORE: 34>, 14, 3, True]
+RSP[14]: [<Protocol.RSP_SHOW_POKER: 36>, 14, [6, 23, 17]]
+hand card[2, 4, 7, 12, 21, 24, 26, 32, 34, 35, 36, 40, 41, 42, 46, 48, 53, 6, 23, 17]
+Player[14] IS LANDLORD[[6, 23, 17]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 14, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 14, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 14, [6, 23, 17]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 14, [6, 23, 17]]
+SOCKET[14] CLOSE
+200 GET / (::1) 0.98ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 13.66ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 12.69ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 9.76ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 11.71ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 10.74ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 10.74ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 3.90ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 55.64ms
+200 GET /static/i/preload.png (::1) 2.93ms
+404 GET /favicon.ico (::1) 0.98ms
+404 GET /static/s/deal.ogg (::1) 0.99ms
+200 GET /static/s/lose.ogg (::1) 11.75ms
+200 GET /static/s/win.ogg (::1) 7.80ms
+200 GET /static/s/bg3.ogg (::1) 18.59ms
+200 GET /static/i/btn.png (::1) 2.97ms
+200 GET /static/i/bg.png (::1) 6.83ms
+200 GET /static/i/poker.png (::1) 1.95ms
+200 GET /static/rule.json (::1) 2.93ms
+200 GET /static/i/btn.json (::1) 3.90ms
+200 POST /reg (::1) 341.60ms
+101 GET /ws (::1) 0.98ms
+SOCKET[15] OPEN
+REQ[15]: [17, 1]
+RSP[15]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[15]: [19, -1]
+RSP[15]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(15, 'p'), (-1, ''), (-1, '')]]
+PLAYER[15] JOIN TABLE[2]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 2]
+REQ[11]: [19, 2]
+RSP[15]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(15, 'p'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[2]
+REQ[12]: [19, 2]
+RSP[15]: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(15, 'p'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[2]
+RSP[15]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 4, 5, 15, 17, 21, 22, 24, 30, 33, 34, 36, 38, 39, 48, 52, 53]]
+TABLE[2] GAME BEGIN[[<core.player.Player object at 0x00000189F9C7FA58>, <core.robot.AiPlayer object at 0x00000189F9C676D8>, <core.robot.AiPlayer object at 0x00000189F9C7F9E8>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(15, 'p'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(15, 'p'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 2, [(15, 'p'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 6, 7, 8, 11, 13, 14, 20, 26, 28, 35, 41, 44, 45, 47, 50, 51]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [2, 9, 10, 12, 16, 18, 19, 23, 25, 27, 31, 32, 37, 42, 43, 46, 49]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[15]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[15]: [33, 3]
+RSP[15]: [<Protocol.RSP_CALL_SCORE: 34>, 15, 3, True]
+RSP[15]: [<Protocol.RSP_SHOW_POKER: 36>, 15, [29, 3, 40]]
+hand card[0, 4, 5, 15, 17, 21, 22, 24, 30, 33, 34, 36, 38, 39, 48, 52, 53, 29, 3, 40]
+Player[15] IS LANDLORD[[29, 3, 40]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 15, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 15, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 15, [29, 3, 40]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 15, [29, 3, 40]]
+SOCKET[15] CLOSE
+200 GET / (::1) 1.95ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 14.63ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 11.71ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 11.71ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 12.71ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 16.60ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 13.66ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 10.72ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 67.34ms
+200 GET /static/i/preload.png (::1) 1.95ms
+404 GET /static/s/deal.ogg (::1) 0.98ms
+200 GET /static/s/lose.ogg (::1) 2.93ms
+200 GET /static/s/win.ogg (::1) 7.81ms
+200 GET /static/s/bg3.ogg (::1) 23.45ms
+404 GET /favicon.ico (::1) 0.99ms
+200 GET /static/i/btn.png (::1) 15.61ms
+200 GET /static/i/poker.png (::1) 13.66ms
+200 GET /static/i/btn.json (::1) 7.80ms
+200 GET /static/i/bg.png (::1) 34.17ms
+200 GET /static/rule.json (::1) 10.73ms
+200 POST /reg (::1) 323.06ms
+101 GET /ws (::1) 0.98ms
+SOCKET[16] OPEN
+REQ[16]: [17, 1]
+RSP[16]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[16]: [19, -1]
+RSP[16]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(16, 'o'), (-1, ''), (-1, '')]]
+PLAYER[16] JOIN TABLE[3]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 3]
+REQ[11]: [19, 3]
+RSP[16]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(16, 'o'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[3]
+REQ[12]: [19, 3]
+RSP[16]: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(16, 'o'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[3]
+RSP[16]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [4, 10, 12, 13, 17, 18, 19, 24, 31, 32, 34, 35, 37, 38, 39, 50, 52]]
+TABLE[3] GAME BEGIN[[<core.player.Player object at 0x00000189F9C67EB8>, <core.robot.AiPlayer object at 0x00000189F9C6F668>, <core.robot.AiPlayer object at 0x00000189F9C67860>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(16, 'o'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(16, 'o'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 3, [(16, 'o'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 3, 5, 7, 9, 14, 15, 16, 20, 23, 25, 28, 36, 41, 44, 45, 47]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 2, 6, 8, 11, 21, 22, 26, 27, 29, 30, 40, 43, 46, 48, 49, 51]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[16]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[16]: [33, 3]
+RSP[16]: [<Protocol.RSP_CALL_SCORE: 34>, 16, 3, True]
+RSP[16]: [<Protocol.RSP_SHOW_POKER: 36>, 16, [33, 53, 42]]
+hand card[4, 10, 12, 13, 17, 18, 19, 24, 31, 32, 34, 35, 37, 38, 39, 50, 52, 33, 53, 42]
+Player[16] IS LANDLORD[[33, 53, 42]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 16, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 16, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 16, [33, 53, 42]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 16, [33, 53, 42]]
+REQ[16]: [37, ['29']]
+Player[16] play non-exist poker
+SOCKET[16] CLOSE
+200 GET / (::1) 0.98ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 11.71ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 11.71ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 14.64ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 16.59ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 16.59ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 10.73ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 5.86ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 65.40ms
+404 GET /favicon.ico (::1) 0.99ms
+200 GET /static/i/preload.png (::1) 4.88ms
+404 GET /static/s/deal.ogg (::1) 1.95ms
+200 GET /static/s/lose.ogg (::1) 5.85ms
+200 GET /static/s/win.ogg (::1) 10.74ms
+200 GET /static/s/bg3.ogg (::1) 21.47ms
+200 GET /static/i/btn.png (::1) 0.98ms
+200 GET /static/i/poker.png (::1) 2.93ms
+200 GET /static/i/bg.png (::1) 21.47ms
+200 GET /static/i/btn.json (::1) 5.85ms
+200 GET /static/rule.json (::1) 18.55ms
+200 POST /reg (::1) 297.65ms
+101 GET /ws (::1) 0.00ms
+SOCKET[17] OPEN
+REQ[17]: [17, 1]
+RSP[17]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[17]: [19, -1]
+RSP[17]: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(17, 't'), (-1, ''), (-1, '')]]
+PLAYER[17] JOIN TABLE[4]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 4]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 4]
+REQ[11]: [19, 4]
+RSP[17]: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(17, 't'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[4]
+REQ[12]: [19, 4]
+RSP[17]: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(17, 't'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[4]
+RSP[17]: [<Protocol.RSP_DEAL_POKER: 32>, 12, [1, 5, 8, 11, 14, 15, 20, 23, 25, 30, 32, 33, 39, 41, 49, 50, 51]]
+TABLE[4] GAME BEGIN[[<core.player.Player object at 0x00000189F9C6F470>, <core.robot.AiPlayer object at 0x00000189F9C7FD30>, <core.robot.AiPlayer object at 0x00000189F9C7F780>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(17, 't'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(17, 't'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 4, [(17, 't'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [2, 4, 6, 9, 10, 12, 17, 18, 31, 34, 36, 43, 45, 46, 47, 52, 53]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 12, [0, 3, 7, 16, 19, 21, 22, 24, 26, 27, 28, 29, 35, 38, 42, 44, 48]]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[17]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[17]: [33, 3]
+RSP[17]: [<Protocol.RSP_CALL_SCORE: 34>, 17, 3, True]
+RSP[17]: [<Protocol.RSP_SHOW_POKER: 36>, 17, [37, 40, 13]]
+hand card[1, 5, 8, 11, 14, 15, 20, 23, 25, 30, 32, 33, 39, 41, 49, 50, 51, 37, 40, 13]
+Player[17] IS LANDLORD[[37, 40, 13]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 17, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 17, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 17, [37, 40, 13]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 17, [37, 40, 13]]
+REQ[17]: [37, [28]]
+Player[17] play non-exist poker
+SOCKET[17] CLOSE
+listening on 8080
+200 GET / (::1) 7.81ms
+200 GET /static/js/boot.js?v=02d3f719d9dce4f90261237be0a072e8 (::1) 11.71ms
+200 GET /static/js/game.js?v=22f115a6369cc1f622b144c4b8d12992 (::1) 9.75ms
+200 GET /static/js/rule.js?v=226f9e152fe218ea6429428625de7968 (::1) 8.78ms
+200 GET /static/js/player.js?v=0525bb367a7c3493985552987ff83be1 (::1) 6.79ms
+200 GET /static/js/phaser-input.min.js?v=906fd46269db14979aaccff08b225782 (::1) 4.88ms
+200 GET /static/js/player_net.js?v=2c3fa89b5758860d2d7da31875a69893 (::1) 8.78ms
+200 GET /static/js/net.js?v=c4b8e3d719ca5934c26efa755c565008 (::1) 7.80ms
+200 GET /static/js/phaser.min.js?v=d4ac6ec4675f7d04ba57640b7ab59976 (::1) 232.29ms
+200 GET /static/i/preload.png (::1) 2.93ms
+404 GET /static/s/deal.ogg (::1) 0.00ms
+200 GET /static/s/lose.ogg (::1) 4.88ms
+200 GET /static/s/win.ogg (::1) 8.78ms
+200 GET /static/s/bg3.ogg (::1) 16.60ms
+404 GET /favicon.ico (::1) 0.98ms
+200 GET /static/i/btn.png (::1) 20.50ms
+200 GET /static/i/poker.png (::1) 24.40ms
+200 GET /static/i/btn.json (::1) 3.91ms
+200 GET /static/i/bg.png (::1) 48.80ms
+200 GET /static/rule.json (::1) 13.65ms
+200 POST /reg (::1) 331.84ms
+101 GET /ws (::1) 0.98ms
+SOCKET[18] OPEN
+REQ[18]: [17, 1]
+RSP[18]: [<Protocol.RSP_JOIN_ROOM: 18>, []]
+REQ[18]: [19, -1]
+RSP[18]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(18, 'y'), (-1, ''), (-1, '')]]
+PLAYER[18] JOIN TABLE[1]
+AI[11] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+AI[12] REQ: [<Protocol.REQ_JOIN_TABLE: 19>, 1]
+REQ[11]: [19, 1]
+RSP[18]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(18, 'y'), (11, 'IDIOT-I'), (-1, '')]]
+PLAYER[11] JOIN TABLE[1]
+REQ[12]: [19, 1]
+RSP[18]: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(18, 'y'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+PLAYER[12] JOIN TABLE[1]
+RSP[18]: [<Protocol.RSP_DEAL_POKER: 32>, 11, [1, 7, 8, 9, 12, 24, 26, 27, 29, 30, 35, 37, 39, 42, 48, 51, 53]]
+TABLE[1] GAME BEGIN[[<core.player.Player object at 0x00000198535B1668>, <core.robot.AiPlayer object at 0x0000019853545A20>, <core.robot.AiPlayer object at 0x00000198535B1CC0>]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(18, 'y'), (11, 'IDIOT-I'), (-1, '')]]
+AI[11] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(18, 'y'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[12] ON: [<Protocol.RSP_JOIN_TABLE: 20>, 1, [(18, 'y'), (11, 'IDIOT-I'), (12, 'IDIOT-II')]]
+AI[11] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [2, 3, 4, 5, 6, 10, 16, 17, 18, 21, 25, 28, 32, 34, 36, 40, 52]]
+AI[12] ON: [<Protocol.RSP_DEAL_POKER: 32>, 11, [0, 11, 13, 14, 15, 19, 22, 23, 33, 38, 43, 44, 45, 46, 47, 49, 50]]
+AI[11] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[11]: [33, 1]
+RSP[18]: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 11, 1, False]
+AI[12] REQ: [<Protocol.REQ_CALL_SCORE: 33>, 1]
+REQ[12]: [33, 1]
+RSP[18]: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 12, 1, False]
+REQ[18]: [33, 3]
+RSP[18]: [<Protocol.RSP_CALL_SCORE: 34>, 18, 3, True]
+RSP[18]: [<Protocol.RSP_SHOW_POKER: 36>, 18, [20, 31, 41]]
+hand card[1, 7, 8, 9, 12, 24, 26, 27, 29, 30, 35, 37, 39, 42, 48, 51, 53, 20, 31, 41]
+Player[18] IS LANDLORD[[20, 31, 41]]
+AI[11] ON: [<Protocol.RSP_CALL_SCORE: 34>, 18, 3, True]
+AI[12] ON: [<Protocol.RSP_CALL_SCORE: 34>, 18, 3, True]
+AI[11] ON: [<Protocol.RSP_SHOW_POKER: 36>, 18, [20, 31, 41]]
+AI[12] ON: [<Protocol.RSP_SHOW_POKER: 36>, 18, [20, 31, 41]]
+REQ[18]: [37, [41]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 18, [41]]
+hand left: [1, 7, 8, 9, 12, 24, 26, 27, 29, 30, 35, 37, 39, 42, 48, 51, 53, 20, 31]
+Player[18] shot[[41]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [41]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [41]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [3]]
+REQ[11]: [37, [3]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+Player[11] shot[[3]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [3]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [43]]
+REQ[12]: [37, [43]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+Player[12] shot[[43]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [43]]
+REQ[18]: [37, [53]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 18, [53]]
+hand left: [1, 7, 8, 9, 12, 24, 26, 27, 29, 30, 35, 37, 39, 42, 48, 51, 20, 31]
+Player[18] shot[[53]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [53]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [53]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [52]]
+REQ[11]: [37, [52]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [52]]
+Player[11] shot[[52]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [52]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [52]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[18]: [37, []]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 18, []]
+hand left: [1, 7, 8, 9, 12, 24, 26, 27, 29, 30, 35, 37, 39, 42, 48, 51, 20, 31]
+Player[18] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, []]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [2]]
+REQ[11]: [37, [2]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [2]]
+Player[11] shot[[2]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [2]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [2]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [44]]
+REQ[12]: [37, [44]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [44]]
+Player[12] shot[[44]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [44]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [44]]
+REQ[18]: [37, [1, 27]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 18, [1, 27]]
+hand left: [7, 8, 9, 12, 24, 26, 29, 30, 35, 37, 39, 42, 48, 51, 20, 31]
+Player[18] shot[[1, 27]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [1, 27]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [1, 27]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[18]: [37, [29, 42]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 18, [29, 42]]
+hand left: [7, 8, 9, 12, 24, 26, 30, 35, 37, 39, 48, 51, 20, 31]
+Player[18] shot[[29, 42]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [29, 42]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [29, 42]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [4, 17]]
+REQ[11]: [37, [4, 17]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4, 17]]
+Player[11] shot[[4, 17]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4, 17]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, [4, 17]]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, [19, 45]]
+REQ[12]: [37, [19, 45]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 12, [19, 45]]
+Player[12] shot[[19, 45]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [19, 45]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, [19, 45]]
+REQ[18]: [37, [26, 39]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 18, [26, 39]]
+hand left: [7, 8, 9, 12, 24, 30, 35, 37, 48, 51, 20, 31]
+Player[18] shot[[26, 39]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [26, 39]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [26, 39]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+REQ[18]: [37, [9, 35, 48]]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 18, [9, 35, 48]]
+hand left: [7, 8, 12, 24, 30, 37, 51, 20, 31]
+Player[18] shot[[9, 35, 48]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [9, 35, 48]]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 18, [9, 35, 48]]
+AI[11] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[11]: [37, []]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+Player[11] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 11, []]
+AI[12] REQ: [<Protocol.REQ_SHOT_POKER: 37>, []]
+REQ[12]: [37, []]
+RSP[18]: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+Player[12] shot[[]]
+AI[11] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+AI[12] ON: [<Protocol.RSP_SHOT_POKER: 38>, 12, []]
+SOCKET[18] CLOSE
