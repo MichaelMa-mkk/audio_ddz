@@ -1,7 +1,7 @@
 from selenium import webdriver
 import os
 #引入chromedriver.exe
-chromedriver = "C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe"
+chromedriver = "/usr/local/bin/chromedriver"
 os.environ["webdriver.chrome.driver"] = chromedriver
 browser = webdriver.Chrome(chromedriver)
 
