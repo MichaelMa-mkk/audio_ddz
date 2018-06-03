@@ -10,7 +10,7 @@ define("debug", default=False, help="debug mode")
 define("host", default="localhost", help="Database host")
 define("database", default="ddz", help="Database name")
 define("user", default="root", help="username")
-define("password", default="root", help="password")
+define("password", default="caojinkun123", help="password")
 tornado.options.parse_command_line()
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
