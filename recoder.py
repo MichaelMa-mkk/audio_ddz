@@ -34,11 +34,13 @@ class pattern:
 def exract(saying):
     Pattern = pattern()
     for key in saying:
-        if(saying[key] < 0.7):
+        if(saying[key] < 0.3):
             continue
         word = key
+        #word = "一个三"
         output = Pattern.match(word)
         print(output)
+        return output
 
 class recoder:
     NUM_SAMPLES = 2000      #pyaudio内置缓冲大小
@@ -129,13 +131,13 @@ if __name__ == "__main__":
         print(res_dict)
         return_res = res_dict['results']
 
-        res = exract(return_res) # generate card string
-        PlayCard(res) # Play card
+        # res = exract(return_res) # generate card string
+        # PlayCard(res) # Play card
 
         print(return_res)
         if len(return_res) != 0:
-            print("Have result:")
-            print(return_res[0]['alternatives'])
+            #print("Have result:")
+            #print(return_res[0]['alternatives'])
             final_res = {}
             for item in return_res[0]['alternatives']:
                 content = item['transcript']
@@ -144,5 +146,8 @@ if __name__ == "__main__":
             for key in final_res.keys():
                 print("key is:" ,key)
                 print("confidence is:", final_res[key])
+            res_real = exract(final_res)
+            print("result by zmh: ", res_real)
+            PlayCard(res_real)
         else:
             print("No recognized result")

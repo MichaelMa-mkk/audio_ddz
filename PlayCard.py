@@ -10,6 +10,9 @@ url = "http://localhost:8080/#/"
 browser.get(url)
 
 def PlayCard(cards):
+	print("card is : ", cards, "\n")
+	if cards == None or len(cards) == 0: 
+		return "no input cards"
 	init = ['A','2','3','4','5','6','7','8','9','0','J','Q','K']
 	play = []
 	f = open('hand_cards.txt');
@@ -17,6 +20,7 @@ def PlayCard(cards):
 	f.close()
 	hands = hands.split(',')
 	print(hands)
+	print("----------------------------- card is : ", cards, "\n")
 	for card in cards:
 		for pid in hands:
 			if (len(pid) == 0):
